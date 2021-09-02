@@ -1,0 +1,602 @@
+<!DOCTYPE HTML>
+<!--
+ Strongly Typed 1.1 by HTML5 UP
+ html5up.net | @n33co
+ Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+ -->
+<html>
+
+<head>
+  <title>Paul Downen</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=1040" />
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700" rel="stylesheet" type="text/css" />
+  <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.dropotron.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/skel-panels.min.js"></script>
+  <noscript>
+      <link rel="stylesheet" href="css/skel-noscript.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/style-desktop.css" />
+      </noscript>
+</head>
+
+<body class="no-sidebar">
+
+  <!-- Header Wrapper -->
+  <div id="header-wrapper">
+
+    <!-- Header -->
+    <div id="header" class="container">
+
+      <!-- Logo -->
+      <h1 id="logo"><a href="#">Paul Downen</a></h1>
+      <p>Department of Computer Science, University of Massachusetts, Lowell.</p>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <!-- <li><a class="fa fa-home" href="index.html"><span>Introduction</span></a></li> -->
+          <li><a class="fa fa-terminal" href="#research"><span>Research</span></a></li>
+          <li><a class="fa fa-pencil" href="#teaching"><span>Teaching</span></a></li>
+          <li>
+            <a class="fa fa-quote-left" href="#publications"><span>Publications</span></a>
+            <ul>
+              <li><a href="#journal-articles">Journal Articles</a></li>
+              <li><a href="#conference-papers">Conference and Workshops</a></li>
+              <li><a href="#unpublished-manuscripts">Unpublished Manuscripts</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="fa fa-comment" href="#presentations"><span>Presentations</span></a>
+            <ul>
+              <li><a href="#conference-talks">Conference Talks</a></li>
+              <li><a href="#workshop-talks">Workshop Talks</a></li>
+              <li><a href="#invited-talks">Invited Talks</a></li>
+            </ul>
+          </li>
+          <li><a class="fa fa-envelope" href="#contact"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+
+  <!-- Main Wrapper -->
+  <div id="main-wrapper">
+
+    <!-- Main -->
+    <div id="main" class="container">
+      <div class="row">
+
+        <!-- Content -->
+        <div id="content" class="12u skel-cell-important">
+
+          <!-- Post -->
+          <article class="is-post" id="about">
+            <p>
+              I moved to <a href="https://www.uml.edu/">University of Massachusetts, Lowell</a> in Fall 2021 to join the <a href="https://cs.uml.edu">Computer Science Department</a> as an Assistant Professor.
+              <br />
+              <b>I'm currently looking for motivated students to work with! If you're interested, send me a <a href="mailto:paul@pauldownen.com">message</a>.</b>
+            </p>
+            <p>
+              Previously, I was a Postdoctoral Research Associate at the <a href="https://www.uoregon.edu/">University of Oregon</a>'s <a href="https://cs.uoregon.edu/">Department of Computer and Information Science</a>.
+            </p>
+          </article>
+
+          <!-- Post -->
+          <article class="is-post" id="research">
+            <header>
+              <a href="#"><h2>Research Interests</h2></a>
+            </header>
+            <p>
+              My general research interests are in the study of <em>programming languages</em>, including their <em>theory</em>, <em>semantics</em>, <em>design</em>, and <em>implementation</em>, with a focus on the <em>foundations of computation</em> and its relation to <em>logic</em> and <em>duality</em>.
+              In particular, I am interested in using logic to help <em>verify</em> that software systems and their <em>compilation</em> is <em>efficient</em>, <em>correct</em>, <em>safe</em>, and <em>secure</em>.
+              I'm also interested in aspects of practical languages including <em>computational effects</em> (like mutable state, exceptions, and first-class continuations) and ways for languages to sensibly bridge between <em>high-level abstractions</em> and <em>low-level implementation details</em>.
+            </p>
+            <p>
+              I have worked on an alternative model for computation based on the connection between programming languages and formal logic (known as the Curry-Howard correspondence or proofs-as-programs interpretation).
+              With a single stroke in 1935, Gentzen laid out the basis for the modern study of formalized logic: <em>natural deduction</em> and the <em>sequent calculus</em>. On the one hand, natural deduction is the logic of the lambda calculus, which serves as the bedrock for functional programming languages (like Scheme, Haskell, and OCaml) and proof assistants (like Coq).
+              On the other hand, the sequent calculus has only recently been connected with a lower-level model for programs that highlights the dualities present in programming languages and details such as evaluation strategies (like strict or lazy evaluation) and control-flow effects (like exceptions).
+              I am developing this model of computation to get another view of programs and languages from different angles:
+              <ul>
+                <li class="fa fa-angle-right">
+                  A high-level calculus for reasoning about the behavior of programs (in a similar style as the lambda calculus) while also accounting for low-level details such as evaluation strategy and control flow.
+                </li>
+                <li class="fa fa-angle-right">
+                  A contextual representation of programs that allows for performing context-sensitive analysis and transformation of programs, as done by optimizing compilers like the <a href="https://www.haskell.org/ghc/">Glasgow Haskell Compiler (GHC)</a>.
+                </li>
+                <li class="fa fa-angle-right">
+                  A dualized framework that gives a symmetric and unified view of programming concepts, as a way to understand differences and similarities in language design, including types and abstraction mechanisms from both functional and object-oriented languages.
+                </li>
+              </ul>
+            </p>
+            <p>
+              Some of these ideas have been (or are currently being) implemented inside GHC for analyzing and optimizing Haskell programs.
+              <ul>
+                <li class="fa fa-angle-right">
+                  <a href="https://hackage.haskell.org/package/sequent-core">Sequent Core</a> (based on <a href="publications/scfp.pdf">"Sequent Calculus as a Compiler Intermediate Language"</a>) is a plugin for GHC that replaces its Core intermediate language with an alternative one based on the sequent calculus.
+                </li>
+                <li class="fa fa-angle-right">
+                  <a href="https://github.com/lukemaurer/ghc/tree/wip/join-points">Join points</a> (based on <a href="publications/pldi17.pdf">"Compiling Without Continuations"</a>) are an extension to the GHC Core language with purely functional labels and jumps, used to optimize branching control flow in programs.
+                </li>
+                <li class="fa fa-angle-right">
+                  Static calling conventions (based on <a href="publications/kacc.pdf">"Kinds Are Calling Conventions"</a>) are a type-based approach to integrating parametric polymorphism with C-like function calls, including number of arguments and their machine representations, completely at compile-time.
+                </li>
+              </ul>
+            </p>
+          </article>
+
+          <article class="is-post" id="teaching">
+            <header>
+              <a href="#"><h2>Teaching</h2></a>
+            </header>
+            <ul>
+              <li class="fa fa-angle-double-right">
+                <a href="courses/21F/EFP/index.html">
+                  Fall 2021: <b>COMP.5300</b> <i>Effective Functional Programming</i>.
+                </a>
+              </li>
+            </ul>
+            <br />
+            My teaching at the University of Oregon was focused on the theory and practice of programming languages, and how it helps us write better software.
+            Previous courses I have designed and taught include:
+            <ul>
+              <li class="fa fa-angle-double-right">
+                <i>Foundations of Programming Languages</i>, an intensive introduction to the fundamentals of the theory of programming languages, for graduate students, advanced undergraduate students, and interested experts from other fields.
+                This course was given at the Oregon Programming Languages Summer School <a href="https://www.cs.uoregon.edu/research/summerschool/summer17/topics.php#review">2017</a> and <a href="https://www.cs.uoregon.edu/research/summerschool/summer18/topics.php#review">2018</a>.
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <i>Advanced Functional Programming</i>, an application of advanced topics and techniques of functional programming for writing practical, interactive, and correct software.
+                This course was given in <a href="https://classes.cs.uoregon.edu/18S/cis410afp/">Spring 2018</a>.
+              </li>
+            </ul>
+            <br />
+            I have also given lectures on the application of numerical methods with functional programming in Python, based on John Hughes' fantastic paper "<a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">Why Functional Programming Matters</a>."
+            <br />
+            <ul>
+              <li class="fa fa-angle-double-right">
+                <a href="notes/nmfp.pdf">Lecture notes</a>
+              </li>
+              <li class="fa fa-angle-double-right">
+                Accompanying <a href="notes/nmfp_template.py">Python template</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="is-post" id="publications">
+            <header>
+              <a href="#"><h2>Publications</h2></a>
+            </header>
+            <h3 id="journal-articles">Journal Articles</h3>
+            <ul>
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2020). <b>Compiling With Classical Connectives</b>.
+                <i>Logical Methods in Computer Science</i>, Volume 16, Issue 3, pp. 13:1-13:57.
+                <br />
+                <a href="publications/1907.13227.pdf">(pdf)</a>
+                <a href="https://lmcs.episciences.org/6740">(online)</a>
+                <a href="https://arxiv.org/abs/1907.13227">(arXiv)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Zena M. Ariola, and Silvia Ghilezan. (2019). <b>The duality of classical intersection and union types</b>.
+                <i>Fundamenta Informaticae</i>, 170, 2019.
+                <br />
+                <a href="publications/interunion.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Philip Johnson-Freyd, and Zena M. Ariola. (2019). <b>Abstracting models of strong normalization for classical calculi</b>.
+                <i>Journal of Logical and Algebraic Methods in Programming</i>, 2019.
+                <br />
+                <a href="publications/classical-sn.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2018). <b>A Tutorial on Computational Classical Logic and the Sequent Calculus</b>.
+                <i>Journal of Functional Programming</i>, 28, e3.
+                <br />
+                <a href="https://doi.org/10.1017/S0956796818000023">(doi)</a>
+                <a href="publications/sequent-intro.pdf">(pdf+appendix)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Philip Johnson-Freyd, Paul Downen, and Zena M. Ariola. (2017). <b>Call-by-Name Extensionality and Confluence</b>.
+                <i>Journal of Functional Programming</i>, 27, e12.
+                <br />
+                <a href="https://doi.org/10.1017/S095679681700003X">(doi)</a>
+                <a href="publications/surjective-call-stacks.pdf">(pdf+appendix)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Philip Johnson-Freyd, Paul Downen, and Zena M. Ariola. (2016). <b>First class call stacks: Exploring head reduction</b>.
+                In <i>Olivier Danvy and Ugo de'Liguoro: Proceedings of the Workshop on Continuations, London, UK, (WoC2015), Electronic Proceedings in Theoretical Computer Science</i>, 212, pp. 18–35.
+                <br />
+                <a href="http://arxiv.org/abs/1606.06378">(arXiv)</a>
+                <a href="publications/first-class-call-stacks.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2014). <b>Delimited control and computational effects</b>.
+                <i>Journal of Functional Programming</i>, 24, pp 1-55.
+                <br />
+                <a href="https://dx.doi.org/10.1017/S0956796813000312">(doi)</a>
+                <a href="publications/delimited-control-effects.pdf">(pdf+appendix)</a>
+              </li>
+            </ul>
+            <h3 id="conference-papers">Conference and Workshop Papers</h3>
+            <ul>
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2021). <b>Duality In Action</b>.
+                In <i>Formal Structures for Computation and Deduction (FSCD2021)</i>.
+                <br />
+                <a href="https://doi.org/10.4230/LIPIcs.FSCD.2021.1">(doi)</a>
+                <a href="publications/dia.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2020). <b>A Computational Understanding of Classical (Co)Recursion</b>.
+                In <i>Principles and Practice of Declarative Programming (PPDP2020)</i>.
+                <br />
+                <a href="https://doi.org/10.1145/3414080.3414086">(doi)</a>
+                <a href="publications/corec.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Zena M. Ariola, Simon Peyton Jones, and Richard A. Eisenberg. (2020). <b>Kinds Are Calling Conventions</b>.
+                In <i>International Conference on Functional Programming (ICFP2020)</i>.
+                <br />
+                <a href="https://doi.org/10.1145/3408986">(doi)</a>
+                <a href="publications/kacc.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Zachary Sullivan, Zena M. Ariola, and Simon Peyton Jones. (2019). <b>Making a Faster Curry with Extensional Types</b>.
+                In <i>Haskell Symposium, Berlin, Germany (Haskell2019)</i>.
+                <br />
+                <a href="publications/eta.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Zachary Sullivan, Zena M. Ariola, and Simon Peyton Jones. (2019). <b>Codata in action</b>.
+                In <i>European Symposium on Programming, Prague, Czech Republic (ESOP2019)</i>.
+                <br />
+                <a href="publications/esop2019.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2018). <b>Beyond Polarity: Towards A Multi-Discipline Intermediate Language with Sharing</b>.
+                In <i>Computer Science Logic, Birmingham, UK (CSL2018)</i>.
+                <br />
+                <a href="https://dx.doi.org/10.4230/LIPIcs.CSL.2018.21">(doi)</a>
+                <a href="publications/csl18_short.pdf">(pdf)</a>
+                <a href="publications/csl18_long.pdf">(pdf+appendix)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Philip Johnson-Freyd, and Zena M. Ariola. (2018). <b>Uniform Strong Normalization for Multi-Discipline Calculi</b>.
+                In <i>International Workshop on Rewriting Logic and its Applications, Thessaloniki, Greece (WRLA2018)</i>.
+                <br />
+                <a href="publications/wrla18.pdf">(pdf+appendix)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Luke Maurer, Paul Downen, Zena M. Ariola, and Simon Peyton Jones. (2017). <b>Compiling without Continuations</b>.
+                In <i>Programming Language Design and Implementation, Barcelona, Spain (PLDI2017)</i>.
+                <b>Best Paper Award</b>.
+                <br />
+                <a href="http://dl.acm.org/authorize?N30138">(acm)</a>
+                <a href="https://doi.org/10.1145/3062341.3062380">(doi)</a>
+                <a href="publications/pldi17.pdf">(pdf)</a>
+                <a href="publications/pldi17_appendix.pdf">(pdf+appendix)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Luke Maurer, Zena Ariola, and Simon Peyton Jones. (2016). <b>Sequent calculus as a compiler intermediate language</b>.
+                <i>International Conference on Functional Programming, Nara, Japan (ICFP2016)</i>.
+                <br />
+                <a href="http://dl.acm.org/authorize?N30137">(acm)</a>
+                <a href="https://doi.org/10.1145/2951913.2951931">(doi)</a>
+                <a href="publications/scfp.pdf">(pdf)</a>
+                <a href="publications/scfp_appendix.pdf">(appendix)</a>
+                <a href="publications/scfp_ext.pdf">(pdf+appendix)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Luke Maurer, Paul Downen, Zena Ariola, and Simon Peyton Jones. (2016). <b>Administrative normal form, continued</b>.
+                <i>Higher-Order Programming with Effects, Nara, Japan (HOPE2016)</i>.
+                <br />
+                <a href="publications/anf-continued.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Philip Johnson-Freyd, and Zena M. Ariola. (2015). <b>Structures for structural recursion</b>.
+                <i>International Conference on Functional Programming, Vancouver, BC, Canada (ICFP2015)</i>.
+                <br />
+                <a href="http://dl.acm.org/authorize?N30136">(acm)</a>
+                <a href="https://doi.org/10.1145/2784731.2784762">(doi)</a>
+                <a href="publications/structure-recursion.pdf">(pdf)</a>
+                <a href="publications/structure-recursion-extended.pdf">(extended)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Philip Johnson-Freyd, Paul Downen, and Zena M. Ariola. (2015). <b>Control controls extensional execution</b>.
+                <i>Higher-Order Programming with Effects, Vancouver, BC, Canada (HOPE2015)</i>.
+                <br />
+                <a href="publications/HOPE2015.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2014). <b>Compositional semantics for composable continuations: from abortive to delimited control</b>.
+                <i>International Conference on Functional Programming, Gothenburg, Sweden (ICFP2014)</i>.
+                <br />
+                <a href="http://dl.acm.org/authorize?N92884">(acm)</a>
+                <a href="https://doi.org/10.1145/2628136.2628147">(doi)</a>
+                <a href="publications/compositional-continuations.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2014). <b>Delimited control with multiple prompts in theory and practice</b>.
+                <i>Higher-Order Programming with Effects, Gothenburg, Sweden (HOPE2014)</i>.
+                <br />
+                <a href="publications/multiple-prompts-tap.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen, Luke Maurer, Zena M. Ariola, and Daniele Varacca. (2014). <b>Continuations, processes, and sharing</b>.
+                <i>Principles and Practice of Declarative Programming, Canterbury, UK (PPDP2014)</i>.
+                <br />
+                <a href="http://dl.acm.org/authorize?N30135">(acm)</a>
+                <a href="https://doi.org/10.1145/2643135.2643155">(doi)</a>
+                <a href="publications/cpsproc.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2014). <b>The duality of construction</b>.
+                <i>European Symposium on Programming, Grenoble, France (ESOP2014)</i>.
+                <br />
+                <a href="http://dx.doi.org/10.1007/978-3-642-54833-8_14">(doi)</a>
+                <a href="publications/duality-construction.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Zena M. Ariola, Paul Downen, Hugo Herbelin, Keiko Nakata, and Alexis Saurin. (2012).
+                <b>Classical call-by-need sequent calculi: The unity of semantic artifacts</b>.
+                <i>International Symposium on Functional and Logic Programming, Kobe, Japan (FLOPS2012)</i>.
+                <br />
+                <a href="http://dx.doi.org/10.1007/978-3-642-29822-6_6">(doi)</a>
+                <a href="publications/classical-need-artifacts.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2012). <b>A Systematic Approach to Delimited Control with Multiple Prompts</b>.
+                <i>European Symposium on Programming, Tallinn, Estonia (ESOP2012)</i>.
+                <b>Best Paper Award</b> nominee.
+                <br />
+                <a href="http://dx.doi.org/10.1007/978-3-642-28869-2_12">(doi)</a>
+                <a href="publications/systematic-multiple-prompts.pdf">(pdf)</a>
+              </li>
+            </ul>
+            <h3 id="unpublished-manuscripts">Unpublished Manuscripts</h3>
+            <ul>
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2021). <b>Classical (Co)Recursion: Programming</b>.
+                <br />
+                <a href="https://arxiv.org/abs/2103.06913">(arXiv)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2021). <b>Classical (Co)Recursion: Mechanics</b>.
+                <br />
+                <a href="https://arxiv.org/abs/2103.08521">(arXiv)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen. (2017). <b>Sequent Calculus: A Logic and a Language for Computation and Duality</b>. Ph.D. thesis, University of Oregon.
+                <br />
+                <a href="publications/downen_phd.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen and Zena M. Ariola. (2017). <b>A Polar Basis for Simple Types</b>.
+                <br />
+                <a href="publications/polar-simple-types.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                Paul Downen. (2014). <b>Computational Duality and the Sequent Calculus</b>. Comprehensive Area Exam Report, University of Oregon.
+                <br />
+                <a href="publications/cdsc.pdf">(pdf)</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="is-post" id="presentations">
+            <header>
+              <a href="#"><h2>Presentations</h2></a>
+            </header>
+            <h3 id="conference-talks">Conference Talks</h3>
+            <ul>
+              <li class="fa fa-angle-double-right">
+                <b>A Computational Understanding of (Co)Recursion</b>.
+                <br /> Venue: Principles and Practice of Declarative Programming. September 10, 2020.
+                <br /> Slides: <a href="presentations/ppdp20-slides.pdf">(pdf)</a>
+                <br /> Video <a href="presentations/ppdp20-talk.mp4">(mp4)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Kinds are Calling Conventions</b>.
+                <br /> Venue: International Conference on Functional Programming. August 27, 2020.
+                <br /> Slides: <a href="presentations/kacc-slides.pdf">(pdf)</a>
+                <br /> Video <a href="presentations/kacc-talk.mp4">(mp4)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Codata in action</b>.
+                <br /> Venue: European Symposium on Programming, Prague, Czech Republic. April 8, 2019.
+                <br /> Slides: <a href="presentations/cia.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Beyond Polarity: Towards A Multi-Discipline Intermediate Language with Sharing</b>.
+                <br /> Venue: Computer Science Logic, Birmingham, UK. September 4, 2019.
+                <br /> Slides: <a href="presentations/beyond-polarity.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Sequent calculus as a compiler intermediate language</b>.
+                <br /> Venue: International Conference on Functional Programming, Nara, Japan. September 19, 2016.
+                <br /> Slides: <a href="presentations/scfp-slides.pdf">(pdf)</a>
+                <br /> Video: <a href="https://www.youtube.com/watch?v=iF0_NRNIoeY">(youtube)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Structures for structural recursion</b>.
+                <br /> Venue: International Conference on Functional Programming, Vancouver, BC, Canada. August 31, 2015.
+                <br /> Slides: <a href="presentations/structure-recursion-slides.pdf">(pdf)</a>
+                <br /> Video: <a href="https://www.youtube.com/watch?v=rzEFoBNc_ko">(youtube)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Continuations, processes, and sharing</b>.
+                <br /> Venue: Principles and Practice of Declarative Programming, Canterbury, UK. September 8, 2014.
+                <br /> Slides: <a href="presentations/cpsproc-slides.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Compositional Semantics for Composable Continuations: From Abortive to Delimited Control</b>.
+                <br /> Venue: International Conference on Functional Programming, Gothenburg, Sweden. September 1, 2014.
+                <br /> Slides: <a href="presentations/compositional-continuations-slides.pdf">(pdf)</a>
+                <br /> Video: <a href="https://www.youtube.com/watch?v=uMQ7Co7OMQU">(youtube)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>The duality of construction</b>.
+                <br /> Venue: European Symposium on Programming, Grenoble, France. April 9, 2014.
+                <br /> Slides: <a href="presentations/duality-construction-slides.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>A Systematic Approach to Delimited Control with Multiple Prompts</b>.
+                <br /> Venue: European Symposium on Programming, Tallinn, Estonia. March 26, 2012.
+                <br /> Slides: <a href="presentations/systematic-multiple-prompts-slides.pdf">(pdf)</a>
+              </li>
+
+            </ul>
+            <h3 id="workshop-talks">Workshop Talks</h3>
+            <ul>
+              <li class="fa fa-angle-double-right">
+                <b>Control controls extensional execution</b>.
+                <br /> Venue: Higher-Order Programming with Effects, Vancouver, BC, Canada. August 30, 2015.
+                <br /> Slides: <a href="presentations/hope2015-slides.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Delimited control with multiple prompts in theory and practice</b>.
+                <br /> Venue: Higher-Order Programming with Effects, Gothenburg, Sweden. August 31, 2014.
+                <br /> Slides: <a href="presentations/multiple-prompts-tap-slides.pdf">(pdf)</a>
+                <br /> Video: <a href="http://www.youtube.com/watch?v=v5HVEKIQDos&t=30m54s">(youtube)</a>
+              </li>
+            </ul>
+            <h3 id="invited-talks">Invited Talks</h3>
+            <ul>
+              <li class="fa fa-angle-double-right">
+                <b>Logic In Action</b>.
+                <br /> Venue: University of Massachusetts, Lowell, MA. April 15, 2021.
+                <br /> Venue: University of Vermont, Burlington, VT. March 17, 2021.
+                <br /> Slides: <a href="presentations/lia.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Kinds Are Calling Convnetions: Intensional Static Polymorphism</b>.
+                <br /> Venue: Principles of Programming and Verification, Boston University, Boston, MA. November 17, 2020.
+                <br /> Slides: <a href="presentations/kacc-popv.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Beyond Polarity: Towards A Multi-Discipline Intermediate Language with Sharing</b>.
+                <br /> Venue: University of Cambridge, UK. September 11, 2019.
+                <br /> Venue: Microsoft Research, Cambridge, UK. September 10, 2019.
+                <br /> Slides: <a href="presentations/beyond-polarity.pdf">(pdf)</a>
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>The structures of induction and co-induction</b>.
+                <br /> Venue: Microsoft Research Lecture, Cambridge, UK. September 17, 2015.
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>The duality of construction</b>.
+                <br /> Venue: McGill University, Montreal, QC, Canada. November 6, 2014.
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Building up delimited control with multiple prompts</b>.
+                <br /> Venue: INRIA Preuves, Programmes et Systèmes, Théorie des types et réalisabilité, Paris, France. December 19, 2012.
+              </li>
+              <br />
+              <li class="fa fa-angle-double-right">
+                <b>Opening the Black Box: Profiling Computer Memory</b>.
+                <br /> Venue: Lawrence Technological University, Arts and Science Seminar Series, Southfield, MI, USA. February 11, 2010.
+              </li>
+            </ul>
+          </article>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Wrapper -->
+  <div id="footer-wrapper">
+
+    <!-- Footer -->
+    <div id="footer" class="container">
+      <header id="contact">
+        <a href="#"><h2>Contact</h2></a>
+      </header>
+      <div class="6u">
+        <section>
+          <div class="row">
+            <ul class="icons 8u">
+              <li class="fa fa-home">
+                Dandeneau Hall<br />
+                University of Massachusetts Lowell<br />
+                Department of Computer Science<br />
+                1 University Avenue<br />
+                Lowell, MA 01854
+              </li>
+            </ul>
+            <ul class="icons 2u">
+              <li class="fa fa-envelope">
+                <a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div id="copyright" class="container">
+    <ul class="links">
+      <li></li>&copy; 2021. All rights reserved</li>
+      <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+    </ul>
+  </div>
+
+  </div>
+
+</body>
+
+</html>

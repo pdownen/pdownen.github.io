@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>SEQUBE</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  </head>
+
+  <body>
+    <h1>SEQUBE: Sequent calculus for programming languages</h1>
+
+    <h2>The duality of construction</h2>
+    Paul Downen and Zena M. Ariola. (2014). <i>European Symposium on Programming, Grenoble, France (ESOP2014)</i>.
+
+    <blockquote>
+      We explore the duality of construction and deconstruction in the presence of different evaluation strategies. We characterize an evaluation strategy by the notion of substitutability, given by defining what is a value and a co-value, and we present an equational theory that takes the strategy as a parameter. The theory may be extended with new logical connectives, in the form of user-defined data and co-data types, which are duals of one another. Finally, we explore a calculus with composite evaluation strategies that allow for more flexibility over evaluation order by mingling multiple primitive strategies within a single program.
+    </blockquote>
+
+    <h4>References</h4>
+    <ul>
+      <li>
+        Paper: <a href="../publications/duality-construction.pdf">pdf</a>
+      </li>
+    </ul>
+
+    <h2>Structures for structural recursion</h2>
+    Paul Downen, Philip Johnson-Freyd, and Zena M. Ariola. (2015). <i>International Conference on Functional Programming, Vancouver, BC, Canada (ICFP2015)</i>.
+
+    <blockquote>
+      Our goal is to develop co-induction from our understanding of induction, putting them on level ground as equal partners for reasoning about programs.  We investigate several structures which represent well-founded forms of recursion in programs.  These simple structures encapsulate reasoning by primitive and noetherian induction principles, and can be composed together to form complex recursion schemes for programs operating over a wide class of data and co-data types.  At its heart, this study is guided by <i>duality</i>: each structure for recursion has a dual form, giving perfectly symmetric pairs of equal and opposite data and co-data types for representing recursion in programs.  Duality is brought out through a framework presented in sequent style, which inherently includes control effects that are interpreted logically as classical reasoning principles.  To accommodate the presence of effects, we give a calculus parameterized by a notion of strategy, which is strongly normalizing for a wide range of strategies.  We also present a more traditional calculus for representing effect-free functional programs, but at the cost of losing some of the founding dualities.
+    </blockquote>
+
+    <h4>References</h4>
+    <ul>
+      <li>
+        Paper: <a href="../publications/structure-recursion.pdf">pdf</a>
+      </li>
+      <li>
+        Extended paper: <a href="../publications/structure-recursion-extended.pdf">pdf</a>
+      </li>
+      <li>
+        Appendix: <a href="../publications/structure-recursion-appendix.pdf">pdf</a>
+      </li>
+    </ul>
+
+    <h2>Sequent calculus as a compiler intermediate language</h2>
+    Paul Downen, Luke Maurer, Zena Ariola, and Simon Peyton Jones. (2016). <i>International Conference on Functional Programming, Nara, Japan (ICFP2016)</i>.
+
+    <blockquote>
+    The λ-calculus is popular as an intermediate language for practical compilers. But in the world of logic it has a lesser-known twin, born at the same time, called the <i>sequent calculus</i>. Perhaps that would make for a good intermediate language, too? To explore this question we designed Sequent Core, a practically-oriented core calculus based on the sequent calculus, and used it to re-implement a substantial chunk of the Glasgow Haskell Compiler.
+    </blockquote>
+
+    <h4>References</h4>
+    <ul>
+      <li>
+        Paper: <a href="../publications/scfp.pdf">pdf</a>
+      </li>
+      <li>
+        Extended paper: <a href="../publications/scfp_ext.pdf">pdf</a>
+      </li>
+      <li>
+        Appendix: <a href="../publications/scfp_appendix.pdf">pdf</a>
+      </li>
+    </ul>
+  </body>
+</html>

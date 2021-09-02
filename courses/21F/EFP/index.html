@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>COMP 5300 - EFP</title>
+	<meta name="description" content="Effective Functional Programming">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css"> 
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+		<div class="row">
+			<div class="header-content twelve columns">
+				<h1 id="logo-text"><a href="index.html" title="">Effective Functional Programming</a></h1>
+				<p id="intro">COMP 5300 - 204</p>
+			</div>
+		</div>
+
+		<nav id="nav-wrap"> 
+
+			<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+			<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+			<div class="row">
+				<ul id="nav" class="nav">
+					<li class="current"><a href="index.html">Info</a></li>
+					<li class="has-children"><a href="resources.html">Resources</a>
+						<ul>
+							<li><a href="resources.html#class">Class</a></li>
+							<li><a href="resources.html#texts">Texts</a></li>
+							<li><a href="resources.html#code">Code</a></li>
+						</ul>
+					</li>
+					<li><a href="schedule.html">Schedule</a></li>	
+					<li class="has-children"><a href="policy.html">Policy</a>
+						<ul>
+							<li><a href="policy.html#grades">Grades</a></li>
+							<li><a href="policy.html#assignments">Assignments</a></li>
+							<li><a href="policy.html#rules">Rules</a></li>
+						</ul>
+					</li>
+				</ul> <!-- end #nav -->
+			</div> 
+
+		</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+		<div class="row">
+
+			<div id="main" class="ten columns">
+
+				<article class="entry">
+
+					<header class="entry-header">
+						<h2 class="entry-title">Synopsis</h2>
+					</header> 
+					
+					<div class="entry-content">
+						<ul>
+							<li>Term: Fall 2021</li>
+							<li>Time: M 3:30pm &ndash; 6:20pm</li>
+							<li>Place: UML North</li>
+							<li>Intructor: Paul Downen &lt;<a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>&gt;</li>
+							<li>Office Hours: TBD <!-- M 1:30pm &ndash; 2:30pm, WR 2:00pm &ndash; 3:30pm, --> or by appointment</li>
+							<li>Office: Dandeneau Hall</li>
+						</ul>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+				
+					<header class="entry-header">
+						<h2 class="entry-title">
+							Class Description
+						</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							As software enters more and more of our daily lives, it also becomes
+							larger and more complex.  Programmers must control the many ways their
+							software interacts with the real world: user input and output, large
+							structured and unstructured data sets, shared resources, communication
+							between networks of devices, and control over real-life machines.
+							Each of these implicit interactions in software creates unintended
+							complexity, making it harder to understand the overall system.  Issues
+							surrounding the safety, security, and correctness of software are all
+							symptoms of this problem.
+						</p>
+						<p>
+							Functional programming techniques give software developers
+							fine-grained control over these interactions, providing a source of
+							modularity and composability that helps tame ever-increasing
+							complexity.  This benefit has found applications in both
+							high-assurance systems, where the cost of bugs is high, and in
+							concurrent and distributed systems, where leveraging multiple cores or
+							machines requires carefully planned communication and coordination.
+						</p>
+						<p>
+							This course is about how functional techniques can be used to write a
+							wide variety of practical programs, including games, data structures,
+							and concurrent programs.  The course covers advanced features found in
+							modern functional languages and their use in software development,
+							with a particular focus on using types to describe the external
+							side-effects of programs, and to automatically eliminate sources of
+							bugs early in the software development process.
+						</p>
+						<p>
+							The class will be primarily project-based, where students will be
+							tasked with developing several programs they can interact with, ending
+							with a final capstone project.  Haskell, which is a platform for both
+							practical software development and cutting-edge technology, will be
+							used as the main language for studying functional programming
+							techniques.  Note that students are not expected to have previous
+							experience with Haskell, and an introduction will be given at the
+							beginning of the course.
+						</p>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+
+					<header class="entry-header">
+						<h2 class="entry-title">Class Objectives</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							At the end of this course, students should be
+							<ul>
+								<li>&bull;
+									confident in their ability to use a functional language to approach any programming problem of their choosing,
+								</li>
+								<li>&bull;
+									familiar with a variety of functional techniques and their application to algorithmic problem solving,
+								</li>
+								<li>&bull; 
+									able to apply (semi)formal methods for understanding, debugging, improving, and extending their software, and
+								</li>
+								<li>&bull;
+									aware of how to transfer their knowledge from this class to other paradigms, like object-oriented programming.
+								</li>
+							</ul>
+						</p>
+					</div>
+
+				</article>
+
+				<article class="entry">
+				
+					<header class="entry-header">
+						<h2 class="entry-title">Prerequisites</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							Prerequisite: Department approval
+						</p>
+						<p>
+							Suggested prerequisite: Organization of Programming Languages, Design of Programming Languages, Compiler Construction, or equivalent.
+						</p>
+						</p>	
+							Students should be comfortable with basic general programming concepts
+							(recursion, data types and structures, etc.) and be able to design and
+							write significant programs in some language.  Previous experience with
+							Haskell or another functional language (Scheme, OCaml, F#, Scala,
+							Clojure, ...) is a plus, but not necessary.
+						</p>
+					</div> 
+
+				</article> <!-- end entry -->  
+
+			</div> <!-- end main -->
+
+		</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul_downen@uml.edu">paul_downen@uml.edu</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
