@@ -34,11 +34,11 @@ firsts xs = mapList first xs
 -- extracts the first component of each pair in a list of pairs, and returns the
 -- list containing each of those extracted values.
 --
--- >  firsts [(1,'a'), (2,'b'), (3,'c')] = [1, 2, 3]
+--     firsts [(1,'a'), (2,'b'), (3,'c')] = [1, 2, 3]
 
 -- 'squares' raises every element in a list of numbers to the power of 2.
 --
--- >  squares [0..10] = [0,1,4,9,16,25,36,49,64,81,100]
+--     squares [0..10] = [0,1,4,9,16,25,36,49,64,81,100]
 --
 squares :: [Integer] -> [Integer]
 squares xs = mapList (\x -> x*x) xs
@@ -46,13 +46,13 @@ squares xs = mapList (\x -> x*x) xs
 -- the 'first' function listed with all the other declarations in the module),
 -- 'squares' passes the *anonymous* function, beginning with the backslash (\)
 --
--- >  \x -> x*x
+--     \x -> x*x
 --
 -- which is defined in-place. This expression defines a function which takes one
 -- parameter ('x') and then returns the multiplication of that parameter by
 -- itself ('x*x'). More generally, the syntax for anonymous functions is
 --
--- >  \var_1 var_2 ... var_n -> ... some expression involving var_1 to var_n ...
+--     \var_1 var_2...var_n -> ... some expression involving var_1 to var_n ...
 --
 -- for defining a function taking n parameters (var_1 to var_n) and returns the
 -- result given by the expression to the right of the arrow (->), which is the
@@ -80,14 +80,14 @@ evens xs = filterList even xs
 -- The 'even' function tests a given number, returning True if it is even and
 -- False otherwise.
 --
--- >  even 12 = True
--- >  even 11 = False
+--     even 12 = True
+--     even 11 = False
 --
 -- So 'evens' takes a list of numbers and keeps only the even ones. Or in other
 -- words, 'evens' returns the same list it was given, in the same order, but
 -- with all the non-even numbers removed.
 --
--- >  evens [0..10] = [0, 2, 4, 6, 8, 10]
+--     evens [0..10] = [0, 2, 4, 6, 8, 10]
 
 positives :: [Integer] -> [Integer]
 positives xs = filterList (\x -> x > 0) xs
@@ -96,13 +96,13 @@ positives xs = filterList (\x -> x > 0) xs
 -- anonymous function (\x -> x > 0) to filterList for testing when a number
 -- ('x') is greater than zero ('x > 0').
 --
--- >  positives [-10 .. 10] = [1,2,3,4,5,6,7,8,9,10]
+--     positives [-10 .. 10] = [1,2,3,4,5,6,7,8,9,10]
 
 -- The Cartesian product of two lists
 --
--- >  cartesianProduct [1,2,3] ['a', 'b']
--- >  =
--- >  [(1,'a'), (1, 'b'), (2, 'a'), (2, 'b'), (3, 'a'), (3, 'b')]
+--     cartesianProduct [1,2,3] ['a', 'b']
+--     =
+--     [(1,'a'), (1, 'b'), (2, 'a'), (2, 'b'), (3, 'a'), (3, 'b')]
 --
 -- can be defined with a list comprehension by drawing from both lists at the
 -- same time.
@@ -136,6 +136,10 @@ isA _ = False
 -- Rectangle (along with floating-point length and width).x
 data Shape = Circle    Float       -- radius
            | Rectangle Float Float -- length and width
+  deriving (Show)
+-- *Note: the `deriving (Show)` clause makes it so that list values can be
+-- automatically printed out in the interactive interpreter. We will say more
+-- about exactly what this means later in the Type Classes section.
 
 -- Some operations on Shapes.
 
@@ -153,6 +157,7 @@ area (Rectangle l w) = l * w
 
 -- An Annotated a value combines an 'a' value with some string annotation.
 data Annotated a = Note String a
+  deriving (Show)
 -- The constructor Note has the type String -> a -> Annotated a
 
 -- Given an Annotated a, you can pull out both the String annotation as well as
@@ -170,9 +175,6 @@ getValue (Note s a) = a
 data List a = Nil              -- []
             | Cons a (List a)  -- x : xs
   deriving (Show)
--- *Note: the `deriving (Show)` clause makes it so that list values can be
--- automatically printed out in the interactive interpreter. We will say more
--- about exactly what this means later in the Type Classes section.
 
 -- You can convert back and forth between [a] and List a.
 toList :: [a] -> List a
@@ -203,7 +205,7 @@ depthFirstSearch (Branch left x right) =
 
 -- String is a type synonym
 --
--- >  type String = [Char]
+--     type String = [Char]
 --
 -- Unlike data types, type synonyms do not define new types, they define aliases
 -- that are indistinguishable with the original type.
@@ -299,10 +301,10 @@ instance Eq ABC where
 
 -- Some other type class instances can be very tedious to write by hand.
 --
--- >  instance Ord ABC where
--- >    compare A A = Eq
--- >    compare A B = LT
--- >    ...
+--     instance Ord ABC where
+--       compare A A = Eq
+--       compare A B = LT
+--       ...
 --
 -- Instead, you can automatically derive a sensible instance using the
 -- 'deriving' keyword as done above. We saw this already in the 'deriving
@@ -352,20 +354,20 @@ deriving instance Ord a => Ord (Tree a)
 -- additional type classes to the deriving clauses of each data type
 -- declarations, like so:
 --
--- >  data Shape = Circle Float | Rectangle Float Float
--- >    deriving (Show, Read, Eq)
+--     data Shape = Circle Float | Rectangle Float Float
+--       deriving (Show, Read, Eq)
 --
--- >  data List a = Nil | Cons a (List a)
--- >    deriving (Show, Read, Eq, Ord)
+--     data List a = Nil | Cons a (List a)
+--       deriving (Show, Read, Eq, Ord)
 --
--- >  data Tree a = Leaf | Branch (Tree a) a (Tree a)
--- >    deriving (Show, Read, Eq, Ord)
+--     data Tree a = Leaf | Branch (Tree a) a (Tree a)
+--       deriving (Show, Read, Eq, Ord)
 --
 -- Stand-alone deriving statements are an extension to the base Haskell
 -- language. You can inform GHC that you would like to use them by adding the
 -- pragma
 --
---   {-# LANGUAGE StandaloneDeriving #-}
+--     {-# LANGUAGE StandaloneDeriving #-}
 --
 -- to the very top of your file.
 
@@ -381,8 +383,8 @@ everything :: (Enum a, Bounded a) => [a]
 everything = [ minBound .. maxBound ]
 -- The polymorphic values
 --
--- >  minBound :: Bounded a => a
--- >  maxBound :: Bounded a => a
+--     minBound :: Bounded a => a
+--     maxBound :: Bounded a => a
 --
 -- give the smallest and largest 'a' values, which depends on the type 'a'.
 -- That means that 'everything' is the list of all values of a type 'a', as long
@@ -417,9 +419,9 @@ x & y = combine x y
 
 -- A Combination instance should obey the following equalities:
 --
--- >  empty & x   = x
--- >  x & empty   = empty
--- >  x & (y & z) = (x & y) & z
+--     empty & x   = x
+--     x & empty   = empty
+--     x & (y & z) = (x & y) & z
 --
 -- With this in mind, there are many possible instances of Combination on the
 -- types we've seen so far.
@@ -480,7 +482,7 @@ fourPoint0 = 4.0
 -- the number literal '4', it interprets it as 'fromInteger 4', where the
 -- 'fromInteger' function comes from the Num type class:
 --
--- >  fromInteger :: Num a => Integer -> a
+--     fromInteger :: Num a => Integer -> a
 --
 -- Notice that fromInteger is a type class function with a fixed input type
 -- (Integer) but a generic *output* type 'a'. The result is that when you see
@@ -492,7 +494,7 @@ fourPoint0 = 4.0
 -- 'fromRational 4.0', where the 'fromRational function somes from the
 -- Fractional type class:
 --
--- >  fromRational :: Fractional a => Rational -> a
+--     fromRational :: Fractional a => Rational -> a
 --
 -- The Rational type represents exact, arbitrary precision, fractions. They are
 -- slower than using Float or Double floating point numbers, but do not have the
