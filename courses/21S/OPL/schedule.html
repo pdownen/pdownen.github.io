@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>COMP 5300 - EFP</title>
+	<meta name="description" content="Organization of Programming Languages">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css"> 
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+   	<div class="row">
+
+   		<div class="header-content twelve columns">
+
+		    <h1 id="logo-text"><a href="index.html" title="">Organization of Programming Languages</a></h1>
+			<p id="intro">COMP 3010 - 201</p>
+
+		</div>			
+
+	</div>
+
+	<nav id="nav-wrap"> 
+
+	<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+	<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+	<div class="row">    		            
+
+		<ul id="nav" class="nav">
+			<li><a href="index.html">Info</a></li>
+			<li class="has-children"><a href="resources.html">Resources</a>
+				<ul>
+					<li><a href="resources.html#class">Class</a></li>
+					<li><a href="resources.html#texts">Texts</a></li>
+					<li><a href="resources.html#code">Code</a></li>
+				</ul>
+			</li>
+			<li class="has-children"><a href="schedule.html">Schedule</a>
+				<ul>
+					<li><a href="schedule.html#lectures">Lectures</a></li>
+					<li><a href="schedule.html#topics">Topics</a></li>
+				</ul>
+			</li>
+			<li class="has-children"><a href="policy.html">Policy</a>
+				<ul>
+					<li><a href="policy.html#grades">Grades</a></li>
+					<li><a href="policy.html#assignments">Assignments</a></li>
+					<li><a href="policy.html#rules">Rules</a></li>
+				</ul>
+			</li>
+		</ul> <!-- end #nav -->			   	 
+
+	</div> 
+
+	</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+   	<div class="row">
+
+   		<div id="main" class="ten columns">
+
+			<article class="entry" id="lectures">
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Lectures
+					</h2>
+				</header>
+
+				<div class="entry-content">
+					<style>
+						td { padding: 0.5ex 2ex; }
+					</style>
+
+					<table>
+						<tr>
+							<th>Date</th>
+							<th>Topic</th>
+							<th>Read</th>
+							<th>Note</th>
+						</tr>
+						<tr>
+							<td>Jan 19</td>
+							<td>What are Programming Languages?</td>
+							<td>CIPL, Ch. 1</td>
+							<td>Online lecture</td>
+						</tr>
+						<tr>
+							<td>Jan 21</td>
+							<td>What Can a Computer Do?</td>
+							<td>CIPL, Ch. 2</td>
+							<td>Online lecture<br /><b>Begin:</b> Assgn. 1</td>
+						</tr>
+					<tr>
+						<td>Jan 24</td>
+						<td>Induction Primer</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jan 26</td>
+						<td>Syntax &amp; Grammars</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jan 28</td>
+						<td>Big-Step Operational Semantics</td>
+						<td></td>
+						<td><b>Due:</b> Assgn. 1</td>
+					</tr>
+					<tr>
+						<td>Jan 31</td>
+						<td>Small-Step Operational Semantics</td>
+						<td></td>
+						<td><b>Begin:</b> Assgn. 2</td>
+					</tr>
+					<tr>
+						<td>Feb 2</td>
+						<td>Alpha, Beta, Eta</td>
+						<td></td>
+						<td><b>Due:</b> Assgn. 2</td>
+					</tr>
+					<tr>
+						<td>Feb 4</td>
+						<td>Lambda Calculus in Small Steps</td>
+						<td></td>
+						<td><b>Begin:<b> Assgn. 3</td>
+					</tr>
+					<tr>
+						<td>Feb 7</td>
+						<td>Lambda Calculus in Big Steps</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Feb 9</td>
+						<td>Intro to Ruby</td>
+						<td></td>
+						<td><b>Due:</b> Assgn. 3</td>
+					</tr>
+					<tr>
+						<td>Feb 11</td>
+						<td>Classes &amp; Objects</td>
+						<td></td>
+						<td><b>Begin:</b>Assgn. 4</td>
+					</tr>
+					<tr>
+						<td>Feb 14</td>
+						<td>Compositional Interpreters</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Feb 16</td>
+						<td>Algebraic Data Types</td>
+						<td></td>
+						<td><b>Due:</b> Assgn. 4</td>
+					</tr>
+					<tr>
+						<td>Feb 18</td>
+						<td>Higher-Order Functions</td>
+						<td></td>
+						<td><b>Begin:</b> Assgn. 5</td>
+					</tr>
+					<tr>
+						<td><strike>Feb 21</strike></td>
+						<td><em>Holiday - No Class</em></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Feb 23</td>
+						<td>Midterm Review</td>
+						<td></td>
+						<td><b>Due:</b> Assgn. 5</td>
+					</tr>
+					<tr>
+						<td>Feb 25</td>
+						<td><b>MIDTERM EXAM</b></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Feb 28</td>
+						<td>The Extensibility Matrix</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 2</td>
+						<td>Visitor Pattern</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 4</td>
+						<td>Syntax Interpreter</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strike>Mar 7</strike></td>
+						<td><em>Spring Break</em></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strike>Mar 9</strike></td>
+						<td><em>Spring Break</em></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strike>Mar 11</strike></td>
+						<td><em>Spring Break</em></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 14</td>
+						<td>The Rules of Types</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 16</td>
+						<td>Generic Polymorphism</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 18</td>
+						<td>Subtyping</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 21</td>
+						<td>Type Checking &amp; Inference</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 23</td>
+						<td>Type Safety</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 25</td>
+						<td>Variable Binding</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 27</td>
+						<td>Static &amp; Dynamic Scope</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mar 30</td>
+						<td>Implementing Recursion</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 1</td>
+						<td>Abstract Machines</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 4</td>
+						<td>Closures</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 6</td>
+						<td>Mutable State</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 8</td>
+						<td>Handling Exceptions</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 11</td>
+						<td>Continuations in Machines</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 13</td>
+						<td>Programming With Continuations</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 15</td>
+						<td>Continuation-Passing Transformations</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strike>Apr 18</strike></td>
+						<td><em>Holiday - No Class</em></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 20</td>
+						<td>Logic Programming</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 22</td>
+						<td>Concurrent Programming</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 25</td>
+						<td>The Paradox of Computation</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 27</td>
+						<td>Metaprogramming</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Apr 29</td>
+						<td>Final Review</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><b>FINAL EXAM</b></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			</article>
+
+			<article class="entry" id="topics">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Topics
+					</h2>
+				</header>
+				
+				<div class="entry-content">
+					<h3>Programming Languages: What, Why, &amp; How?</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>What are Programming Languages?</em> syntax vs semantics, interpreters vs compilers, expressive power vs Turing tarpit, safety and security, formal vs informal specifications</li>
+								<li><em>What Can a Computer Do?</em> limits of static analysis, the full employment theorem for compiler writers, the halting problem</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li>Concepts in Programming Languages, Chapters 1 &amp; 2</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Induction: The Workhorse of Programming Languages</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Induction Primer:</em> inductive sets and trees, proof by induction</li>
+								<li><em>Syntax &amp; Grammars:</em> context-free grammar, BNF, abstract vs concrete syntax trees</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment1.pdf">Assignment 1</a>
+									<b>DUE:</b> January 31
+								</li>
+						</li>
+					</ul>
+
+					<h3>Operational Semantics: Big &amp; Small</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Big-Step Operational Semantics</em></li>
+								<li><em>Small-Step Operational Semantics</em></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li>???</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Lambda Calculus: The Laws of Functions</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Alpha, Beta, Eta</em></li>
+								<li><em>Lambda Calculus in Small Steps</em></li>
+								<li><em>Lambda Calculus in Big Steps</em></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li>Concepts in Programming Languages, Chapter 4</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Object-Oriented Programming</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Introduction to Ruby</em></li>
+								<li><em>Classes &amp; Objects</em></li>
+								<li><em>Compositional Interpreters</em></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li>Quick Intro to Ruby</li>
+								<li>Why's Poingnant Guide to Ruby</li>
+								<li>Concepts in Programming Languages, Chapters ???</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<h3>Functional Programming</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Algebraic Data Types</em></li>
+								<li><em>Higher Order Functions</em></li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>The Expression Problem</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>The Extensibility Matrix</em></li>
+								<li><em>Visitor Pattern</em></li>
+								<li><em>Syntax Interpreter</em></li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Type Systems</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>The Rules of Types</em></li>
+								<li><em>Generic Polymorphism</em></li>
+								<li><em>Subtyping</em></li>
+								<li><em>Type Checking &amp; Inference</em></li>
+								<li><em>Type Safety</em></li>
+							</ul>
+						</li>
+
+					<h3>Binding &amp; Scope</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Variable Binding</em></li>
+								<li><em>Static and Dynamic Scope</em></li>
+								<li><em>Implementing Recursion</em></li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Machines &amp; Effects</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Abstract Machines: Efficient Semantics</em></li>
+								<li><em>Closures: Remember Where You Came From</em></li>
+								<li><em>Mutable State: Changing the World</em></li>
+								<li><em>Raising Exceptions: And Handling the Unexpected</em></li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Continuations: Capturing the Future</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Continuations in Machines</em></li>
+								<li><em>Programming with Continuations</em></li>
+								<li><em>Continuation-Passing Transformations</em></li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Other Programming Paradigms</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Logic Programming:</em> proof search, Prolog</li>
+								<li><em>Concurrent Programming:</em> actor model, Erlang</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Programs About Programs</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>The Paradox of Computation</em></li>
+								<li><em>Metaprogramming</em></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+
+			</article> <!-- end entry -->
+			
+		</div> <!-- end main -->
+
+	</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul_downen@uml.edu">paul_downen@uml.edu</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
