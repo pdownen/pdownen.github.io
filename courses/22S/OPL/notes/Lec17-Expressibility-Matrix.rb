@@ -229,11 +229,10 @@ def pretty_print_summand(summ)
     # The `:minus` operator is printed as "-"
     "-"
 
-  in {num: _} | {times: _} | {divide: _}
-    # A sub-expression which is a number (matching {num:...}) a
-    # multiplication (matching {times:...}) or a division (matching
-    # {divide:...}) does not need to be surrounded by parentheses when
-    # inside of a chain of additions and subtractions...
+  in {num: _}
+    # A sub-expression which is a number (matching {num:...}) does not need to
+    # be surrounded by parentheses when inside of a chain of additions and
+    # subtractions...
     pretty_print_arith(summ)
 
   else
