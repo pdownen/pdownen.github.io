@@ -1,6 +1,6 @@
 # coding: utf-8
 #############################################
-###      Assignment 8 --- Answer Key      ###
+###     Assignment 8 --- Type Checking    ###
 ###                                       ###
 ### Organization of Programming Languages ###
 ###              Spring 2022              ###
