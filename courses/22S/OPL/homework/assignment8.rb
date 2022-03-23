@@ -573,34 +573,77 @@ end
 ## Test Cases ##
 ################
 
-# ex01 = +(5)
+# ex01 = plus(5)
 # ex01 = 5 + _
 ex01 = {app: [{var: :plus}, {num: 5}]}
+# (plus 5)
+# :
+# (number->number)
+# =
+# number->number
 
-# ex02 = ex1(4) = +(5)(4)
+
+# ex02 = ex1(4) = plus(5)(4)
 # ex02 = 5 + 4
 ex02 = {app: [ex01, {num: 4}]}
+# ((plus 5) 4)
+# :
+# number
+# =
+# number
 
-# ex03 = -(ex02)
+
+# ex03 = minus(ex02) = minus(plus(5)(4))
 # ex03 = ex02 - _ = (5 + 4) - _
 ex03 = {app: [{var: :minus}, ex02]}
+# (minus ((plus 5) 4))
+# :
+# (number->number)
+# =
+# number->number
 
-# ex04 = ex03(3)
+
+
+# ex04 = ex03(3) = minus(plus(5)(4))(3)
 # ex04 = (5 + 4) - 3
 ex04 = {app: [ex03, {num: 3}]}
+# ((minus ((plus 5) 4)) 3)
+# :
+# number
+# =
+# number
 
-# ex05 = λx.λy. if x then true else y
+
+# ex05 = λx:boolean. λy:boolean. if x then true else y
 ex05 = {fun: [{var: :x, type: :boolean},
               {fun: [{var: :y, type: :boolean},
                      {if: [{var: :x},
                            {bool: true},
                            {var: :y}]}]}]}
+# (λx:boolean. (λy:boolean. if x then true else y))
+# :
+# (boolean->(boolean->boolean))
+# =
+# boolean->boolean->boolean
+
 
 # ex06 = ex05(false)
 ex06 = {app: [ex05, {bool: false}]}
+# ((λx:boolean. (λy:boolean. if x then true else y)) false)
+# :
+# (boolean->boolean)
+# =
+# boolean->boolean
+
 
 # ex07 = ex06(false) = ex05(false)(false)
 ex07 = {app: [ex06, {bool: false}]}
+# (((λx:boolean. (λy:boolean. if x then true else y)) false) false)
+# :
+# boolean
+# =
+# boolean
+
 
 # ex08 = λf.λx. f(f(x))
 ex08 = {fun: [{var: :f, type: {arrow: [:number, :number]}},
@@ -608,12 +651,30 @@ ex08 = {fun: [{var: :f, type: {arrow: [:number, :number]}},
                      {app: [{var: :f},
                             {app: [{var: :f},
                                    {var: :x}]}]}]}]}
+# (λf:number->number. (λx:number. (f (f x))))
+# :
+# ((number->number)->(number->number))
+# =
+# (number->number)->number->number
+
 
 # ex09 = ex08(ex01)
 ex09 = {app: [ex08, ex01]}
+# ((λf:number->number. (λx:number. (f (f x)))) (plus 5))
+# :
+# (number->number)
+# =
+# number->number
+
 
 # ex10 = ex09(9) = ex08(ex01)(9)
 ex10 = {app: [ex09, {num: 9}]}
+# (((λf:number->number. (λx:number. (f (f x)))) (plus 5)) 9)
+# :
+# number
+# =
+# number
+
 
 # The local binding
 #
@@ -631,6 +692,12 @@ end
 ex11 = let(:x, :number, {num: 11},
            {app: [{app: [{var: :plus}, {var: :x}]},
                   {var: :x}]})
+# ((λx:number. ((plus x) x)) 11)
+# :
+# number
+# =
+# number
+
 
 # ex12 = let x:number = 12 in
 #        let f:boolean->boolean = (λx:boolean. x) in
@@ -640,6 +707,12 @@ ex12 = let(:x, :number, {num: 12},
                {fun: [{var: :x, type: :boolean}, {var: :x}]},
                {app: [{app: [{var: :plus}, {var: :x}]},
                       {var: :x}]}))
+# ((λx:number. ((λf:boolean->boolean. ((plus x) x)) (λx:boolean. x))) 12)
+# :
+# number
+# =
+# number
+
 
 # ex13 = let x:number = 13 in
 #        (λy:number. λx:boolean. y) x false
@@ -649,6 +722,12 @@ ex13 = let(:x, :number, {num: 13},
                                        {var: :y}]}]},
                          {var: :x}]},
                   {bool: false}]})
+# ((λx:number. (((λy:number. (λx:boolean. y)) x) false)) 13)
+# :
+# number
+# =
+# number
+
 
 # ex14 = let x : number         = 14 in
 #        let f : number->number = (λy. x+y) in
@@ -663,6 +742,12 @@ ex14 = let(:x, :number,
                let(:x, :boolean,
                    {bool: false},
                    {app: [{var: :f}, {num: 1}]})))
+# ((λx:number. ((λf:number->number. ((λx:boolean. (f 1)) false)) (λy:number. ((plus x) y)))) 14)
+# :
+# number
+# =
+# number
+
 
 # ex15 = let f : (number -> number) -> number -> number = (λh.λx. h(x)) in
 #        let x : boolean = false in
@@ -679,13 +764,35 @@ ex15 = let(:f, {arrow: [{arrow: [:number, :number]}, {arrow: [:number, :number]}
                                  {app: [{app: [{var: :minus}, {var: :x}]},
                                         {num: 1}]}]}]},
                    {app: [{var: :g}, {num: 15}]})))
+# ((λf:(number->number)->number->number. ((λx:boolean. ((λg:number->number. (g 15)) (f (λx:number. ((minus x) 1))))) false)) (λh:number->number. (λx:number. (h x))))
+# :
+# number
+# =
+# number
+
 
 # ex16 = (λx:boolean.x) 16
 ex16 = {app: [{fun: [{var: :x, type: :boolean}, {var: :x}]},
               {num: 16}]}
+# Incompatible types in function application:
+#
+#   expected parameter of type boolean,
+#   got argument 16 : number,
+#
+# in application: ((λx:boolean. x) 16);
+#
+# context: plus : number->number->number, minus : number->number->number, times : number->number->number, divide : number->number->number, equal? : number->number->boolean, greater? : number->number->boolean
 
 # ex17 = false(17)
 ex17 = {app: [{bool: false}, {num: 17}]}
+# Non-function operation in application:
+#
+#   got operation false : boolean,
+#
+# in application: (false 17);
+#
+# context: plus : number->number->number, minus : number->number->number, times : number->number->number, divide : number->number->number, equal? : number->number->boolean, greater? : number->number->boolean
+
 
 # ex18 = let x : number = 1 in
 #        let y : boolean = true in
@@ -693,14 +800,40 @@ ex17 = {app: [{bool: false}, {num: 17}]}
 ex18 = let(:x, :number, {num: 1},
            let(:y, :boolean, {bool: true},
                {if: [{bool: false}, {var: :x}, {var: :y}]}))
+# Incompatible types in branches of conditional statement:
+#
+#   got 'then' branch x : number
+#   got 'else' branch y : boolean
+#
+# in expression: if false then x else y
+#
+#context: plus : number->number->number, minus : number->number->number, times : number->number->number, divide : number->number->number, equal? : number->number->boolean, greater? : number->number->boolean, x : number, y : boolean
+
 
 # ex19 = true / false
 ex19 = {app: [{app: [{var: :divide}, {bool: true}]}, {bool: false}]}
+# Incompatible types in function application:
+#
+#   expected parameter of type number,
+#   got argument true : boolean,
+#
+# in application: (divide true);
+#
+# context: plus : number->number->number, minus : number->number->number, times : number->number->number, divide : number->number->number, equal? : number->number->boolean, greater? : number->number->boolean
+
 
 # ex20 = if (λx:number. x) then 1 else 0
 ex20 = {if: [{fun: [{var: :x, type: :number}, {var: :x}]},
              {num: 1},
              {num: 0}]}
+# Non-boolean guard condition of 'if':
+#
+#   got guard (λx:number. x) : number->number
+#
+# in expression: if (λx:number. x) then 1 else 0;
+#
+# context: plus : number->number->number, minus : number->number->number, times : number->number->number, divide : number->number->number, equal? : number->number->boolean, greater? : number->number->boolean
+
 
 examples = [ ex01, ex02, ex03, ex04, ex05,
              ex06, ex07, ex08, ex09, ex10,
