@@ -1,11 +1,11 @@
 # coding: utf-8
-#############################################
-###      Assignment 10 --- Answer Key     ###
-###                                       ###
-### Organization of Programming Languages ###
-###              Spring 2022              ###
-###              Paul Downen              ###
-#############################################
+################################################
+### Assignment 10 --- Functional Interpreter ###
+###                                          ###
+###  Organization of Programming Languages   ###
+###               Spring 2022                ###
+###               Paul Downen                ###
+################################################
 
 # For each of the exercises below, follow the instructions to fill in
 # the missing pieces of code, marked by the comment looking like
@@ -356,9 +356,9 @@ end
 # the function itself, to show the programmer what variables are in
 # scope when this closure was created.
 
-# For extra extra credit, avoid printing any primitive operations that
-# were loaded into the environment at the start of evaluation.  In
-# other words, if the value associated with a variable name is the
+# For extra extra credit , avoid printing any primitive operations
+# that were loaded into the environment at the start of evaluation.
+# In other words, if the value associated with a variable name is the
 # same in the closure's environment as it is in the `$primops` table
 # below, then *do not* include it in the output of `to_s`.
 
