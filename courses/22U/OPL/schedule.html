@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>COMP 3010 - OPL</title>
+	<meta name="description" content="Organization of Programming Languages">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css"> 
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="lambda_sans.svg" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+   	<div class="row">
+
+   		<div class="header-content twelve columns">
+
+		    <h1 id="logo-text"><a href="index.html" title="">Organization of Programming Languages</a></h1>
+			<p id="intro">COMP 3010</p>
+
+		</div>			
+
+	</div>
+
+	<nav id="nav-wrap"> 
+
+	<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+	<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+	<div class="row">    		            
+
+		<ul id="nav" class="nav">
+			<li><a href="index.html">Info</a></li>
+			<li class="has-children"><a href="resources.html">Resources</a>
+				<ul>
+					<li><a href="resources.html#class">Class</a></li>
+					<li><a href="resources.html#texts">Texts</a></li>
+					<li><a href="resources.html#code">Code</a></li>
+				</ul>
+			</li>
+			<li class="has-children"><a href="schedule.html">Schedule</a>
+				<ul>
+					<li><a href="schedule.html#lectures">Lectures</a></li>
+					<li><a href="schedule.html#topics">Topics</a></li>
+				</ul>
+			</li>
+			<li class="has-children"><a href="policy.html">Policy</a>
+				<ul>
+					<li><a href="policy.html#grades">Grades</a></li>
+					<li><a href="policy.html#success">Success</a></li>
+					<li><a href="policy.html#rules">Rules</a></li>
+				</ul>
+			</li>
+		</ul> <!-- end #nav -->			   	 
+
+	</div> 
+
+	</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+   	<div class="row">
+
+   		<div id="main" class="ten columns">
+
+			<article class="entry" id="lectures">
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Lectures
+					</h2>
+				</header>
+
+				<div class="entry-content">
+					<style>
+						td { padding: 0.5ex 2ex; }
+					</style>
+
+					<table>
+						<tr>
+							<th>Date</th>
+							<th>Topic</th>
+							<th>Do</th>
+							<th>Read</th>
+							<th>Note</th>
+						</tr>
+						<tr>
+							<td>Jul 6</td>
+							<td>What are Programming Languages?</td>
+							<td></td>
+							<td>
+								<a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch. 1</a>
+								<br />
+								<a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">OpSem, Ch. 1</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Jul 6</td>
+							<td>What Can a Computer Do?</td>
+							<td><b>Begin:</b> <a href="homework/assignment1.pdf">Assgn. 1</a></td>
+							<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch. 2</a></td>
+							<td></td>
+						</tr>
+					<tr>
+						<td>Jul 7</td>
+						<td>Induction Primer</td>
+						<td></td>
+						<td>
+							<a href="https://www.cs.utah.edu/~mflatt/past-courses/cs7520/public_html/s06/notes.pdf">PLLC, Ch. 2</a>
+							<br />
+							<a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">OpSem, Ch. 2</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 7</td>
+						<td>Syntax &amp; Grammars</td>
+						<td></td>
+						<td>
+							<a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch. 4.1</a>
+							<br />
+							<a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">OpSem, Ch. 3</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 11</td>
+						<td>Big-Step Operational Semantics</td>
+						<td><b>Due:</b> <a href="homework/assignment1.pdf">Assgn. 1</a></td>
+						<td><a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">OpSem, Ch. 4</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 11</td>
+						<td>Small-Step Operational Semantics</td>
+						<td><b>Begin:</b> <a href="homework/assignment2.pdf">Assgn. 2</a></td>
+						<td><a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">OpSem, Ch. 5</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 13</td>
+						<td>Alpha, Beta, Eta</td>
+						<td><b>Due:</b> <a href="homework/assignment2.pdf">Assgn. 2</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch. 4.2</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 13</td>
+						<td>Lambda Calculus in Small Steps</td>
+						<td><b>Begin:</b> <a href="homework/assignment3.pdf">Assgn. 3</a></td>
+						<td><a href="https://www.cs.utah.edu/~mflatt/past-courses/cs7520/public_html/s06/notes.pdf">PLLC, Ch 4.1&amp;4.2</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 14</td>
+						<td>Lambda Calculus in Big Steps</td>
+						<td></td>
+						<td><a href="https://www.cs.utah.edu/~mflatt/past-courses/cs7520/public_html/s06/notes.pdf">PLLC, Ch 4.1&amp;4.2</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 18</td>
+						<td>Intro to Ruby</td>
+						<td><b>Due:</b> <a href="homework/assignment3.pdf">Assgn. 3</a></td>
+						<td>
+							<a href="https://www.ruby-lang.org/en/documentation/quickstart/">Intro to Ruby</a>
+							<br />
+							<a href="https://poignant.guide/">Why's, Ch. 3</a>
+						</td>
+						<td><a href="notes/Lec10-Tour-of-Ruby.rb">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td>Jul 18</td>
+						<td>Classes &amp; Objects</td>
+						<td><b>Begin:</b> <a href="homework/assignment4.rb">Assgn. 4</a></td>
+						<td>
+							<a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 10</a>
+							<br />
+							<a href="https://ruby-doc.org/docs/ruby-doc-bundle/ProgrammingRuby/book/tut_classes.html">Prog. Ruby, Classes</a>
+						</td>
+						<td><a href="notes/Lec11-Classes&Objects.rb">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td>Jul 20</td>
+						<td>Compositional Interpreters</td>
+						<td></td>
+						<td></td>
+						<td><a href="notes/Lec12-Compositional-Interpreter.rb">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td>Jul 21</td>
+						<td>Higher-Order Functions</td>
+						<td>
+							<b>Due:</b> <a href="homework/assignment4.rb">Assgn. 4</a>
+							<br />
+							<b>Begin:</b> <a href="homework/assignment5.pdf">Assgn. 5</a>
+						</td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 3&amp;4.4</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 25</td>
+						<td>Algebraic Data Types</td>
+						<td></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 5</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 27</td>
+						<td><b>MIDTERM EXAM</b></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Jul 28</td>
+						<td>Syntactic Interpreters</td>
+						<td><b>Due:</b> <a href="homework/assignment5.pdf">Assgn. 5</a></td>
+						<td></td>
+						<td><a href="notes/Lec16-Syntactic-Interpreter.sml">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td>Jul 28</td>
+						<td>The Extensibility Matrix</td>
+						<td><b>Begin:</b> <a href="homework/assignment6.rb">Assgn. 6</a></td>
+						<td></td>
+						<td><a href="notes/Lec17-Expressibility-Matrix.rb">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td>Aug 1</td>
+						<td>The Rules of Types</td>
+						<td><b>Due:</b> <a href="homework/assignment6.rb">Assgn. 6</a></td>
+						<td>
+              <a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 6</a>
+              <br />
+              <a href="https://www.cs.cmu.edu/~fp/courses/15312-f04/handouts/04-semantics.pdf">Static Semantics</a>
+            </td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 1</td>
+						<td>Abstraction &amp; Polymorphism</td>
+						<td><b>Begin:</b> <a href="homework/assignment7.pdf">Assgn. 7</a></td>
+						<td>
+              <a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 6</a>
+            </td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 3</td>
+						<td>Type Checking &amp; Inference</td>
+						<td><b>Extra Credit:</b> <a href="homework/extracredit1.pdf"> E.C. 1</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 6</a></td>
+						<td><a href="notes/Lec20-Type-Checker.rb">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td>Aug 4</td>
+						<td>Variable Binding</td>
+						<td><b>Due:</b> <a href="homework/assignment7.pdf">Assgn. 7</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 7</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 4</td>
+						<td>Static &amp; Dynamic Scope</td>
+						<td><b>Begin:</b> <a href="homework/assignment8.rb">Assgn. 8</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 7</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 8</td>
+						<td>Implementing Recursion</td>
+						<td><b>Due:</b> <a href="homework/assignment8.rb">Assgn. 8</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 7</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 8</td>
+						<td>Abstract Machines</td>
+						<td><b>Begin:</b> <a href="homework/assignment9.pdf">Assgn. 9</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 8</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 10</td>
+						<td>Closures</td>
+						<td><b>Due:</b> <a href="homework/assignment9.pdf">Assgn. 9</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 8</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 10</td>
+						<td>Mutable State</td>
+						<td><b>Begin:</b> <a href="homework/assignment10.rb">Assgn. 10</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 8</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 11</td>
+						<td>Handling Exceptions</td>
+						<td><b>Extra Credit:</b> <a href="homework/extracredit2.pdf"> E.C. 2</a></td>
+						<td><a href="https://doi.org/10.1017/CBO9780511804175">CIPL, Ch 8</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 11</td>
+						<td>Continuations in Machines</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Aug 15</td>
+						<td>Programming With Continuations</td>
+						<td></td>
+						<td></td>
+						<td><a href="notes/Lec31-Programming-Continuations.rb">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td>Aug 15</td>
+						<td>Continuation-Passing Style</td>
+						<td><b>Due:</b> <a href="homework/assignment10.rb">Assgn. 10</a></td>
+						<td></td>
+						<td><a href="notes/Lec32-Continuation-Passing.rb">Notes Script</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><b>FINAL EXAM</b></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			</article>
+
+			<article class="entry" id="topics">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Topics
+					</h2>
+				</header>
+				
+				<div class="entry-content">
+					<h3>Programming Languages: What, Why, &amp; How?</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>What are Programming Languages?</em> syntax vs semantics, interpreters vs compilers, expressive power vs Turing tarpit, safety and security, formal vs informal specifications</li>
+								<li><em>What Can a Computer Do?</em> limits of static analysis, the full employment theorem for compiler writers, the halting problem</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapters 1 &amp; 2</a></li>
+								<li><a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">Operational Semantics, Chapter 1</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Induction: The Workhorse of Programming Languages</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Induction Primer:</em> inductive sets and trees, proof by induction</li>
+								<li><em>Syntax &amp; Grammars:</em> context-free grammar, BNF, abstract vs concrete syntax trees</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapter 4.1</a></li>
+								<li><a href="https://www.cs.utah.edu/~mflatt/past-courses/cs7520/public_html/s06/notes.pdf">Programming Languages and Lambda Calculi, Chapter 2</a></li>
+								<li><a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">Operational Semantics, Chapters 2 &amp; 3</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment1.pdf">Assignment 1</a>
+									<b>DUE:</b> July 11
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Operational Semantics: Big &amp; Small</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Big-Step Operational Semantics:</em> also known as "natural semantics", evaluation, derivation trees</li>
+								<li><em>Small-Step Operational Semantics:</em> reduction rules, evaluation contexts</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://www.doc.ic.ac.uk/~svb/AssuredSoftware/notes.pdf">Operational Semantics, Chapters 4 &amp; 5</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment2.pdf">Assignment 2</a>
+									<b>DUE:</b> July 13
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Lambda Calculus: The Laws of Functions</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Alpha, Beta, Eta:</em> syntax of lambda calculus, variable names and alpha-equivalence, substitution and beta-equivalence, extensionality and eta-equivalence</li>
+								<li><em>Lambda Calculus in Small Steps:</em> beta-reduction, call-by-value versus call-by-name, normalization, confluence</li>
+								<li><em>Lambda Calculus in Big Steps:</em> evaluation order, normal forms, weak versus strong evaluation</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapter 4.2</a></li>
+								<li><a href="https://www.cs.utah.edu/~mflatt/past-courses/cs7520/public_html/s06/notes.pdf">Programming Languages and Lambda Calculi, Chapters 4.1 &amp; 4.2</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment3.pdf">Assignment 3</a>
+									<b>DUE:</b> July 18
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Object-Oriented Programming</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Introduction to Ruby:</em> basic Ruby programming, variables and values, function definitions, interactive interpreter</li>
+								<li><em>Classes &amp; Objects:</em> user-defined classes, objects and encapsulation, method calls, dynamic dispatch</li>
+								<li><em>Compositional Interpreters:</em> class-based representation of syntax trees, evaluation and interpretation methods, compositionality</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Notes</h4>
+							<ul>
+								<li><a href="notes/Lec10-Tour-of-Ruby.rb">Tour of Ruby (interactive Ruby script)</a></li>
+								<li><a href="notes/Lec11-Classes&Objects.rb">Classes &amp; Objects (interactive Ruby script)</a></li>
+								<li><a href="notes/Lec12-Compositional-Interpreter.rb">Compositional Interpreters (interactive Ruby script)</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapter 10</a></li>
+								<li><a href="https://try.ruby-lang.org">Try Ruby in your browser</a></li>
+								<li><a href="https://www.ruby-lang.org/en/documentation/quickstart/">Quick Introduction to Ruby</a></li>
+								<li><a href="https://poignant.guide/">Why's (Poignant) Guide to Ruby, Chapter 3</a></li>
+								<li><a href="https://ruby-doc.org/docs/ruby-doc-bundle/ProgrammingRuby/book/tut_classes.html">Programming Ruby: Classes, Objects, and Variables</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Software</h4>
+							<ul>
+								<li><a href="https://www.ruby-lang.org/en/">The Ruby programming language</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment4.rb">Assignment 4</a>
+									<b>DUE:</b> July 21
+								</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<h3>Functional Programming</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Higher Order Functions:</em> currying, list-processing functions (map, reduce, <em>etc.</em>)</li>
+								<li><em>Algebraic Data Types:</em> data type representation of syntax trees, pattern matching</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Notes</h4>
+							<ul>
+								<li><a href="notes/Lec13-HOF.scm">Higher-Order Functions (interactive Scheme script)</a></li>
+								<li><a href="notes/Lec14-ADTs.sml">Algebraic Data Types (interactive SML code)</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapters 3, 4.4, &amp; 5</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Software</h4>
+							<ul>
+								<li><a href="https://racket-lang.org">The Racket programming language</a> &mdash; a dialect of Scheme, in the Lisp family of languages</li>
+								<li><a href="https://smlnj.org">Standard ML of New Jersey</a> &mdash; a feature-rich implementation of SML</li>
+								<li><a href="https://smlfamily.github.io">A list of other implementations of the Standard ML programming language</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment5.pdf">Assignment 5</a>
+									<b>DUE:</b> July 28
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>The Expression Problem</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Syntax Interpreter:</em> modeling syntax as an algebraic data type, (mutual) recursion over abstract syntax trees, evaluation</li>
+								<li><strike><em>Visitor Pattern</em></strike></li>
+								<li><em>The Extensibility Matrix:</em> modeling syntax as symbolic data structures (hash tables, lists), different methods of printing, functional versus object-oriented extensibility</li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Notes</h4>
+							<ul>
+								<li><a href="notes/Lec16-Syntactic-Interpreter.sml">Syntactic Interpreter (in Standard ML)</a></li>
+								<li><a href="notes/Lec17-Expressibility-Matrix.rb">Extensibility Matrix of Syntax and Interpreters (interactive Ruby script)</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment6.rb">Assignment 6</a>
+									<b>DUE:</b> August 1
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Type Systems</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>The Rules of Types</em></li>
+								<li><em>Generic Polymorphism</em></li>
+								<li><em>Subtyping</em></li>
+								<li><em>Type Checking &amp; Inference</em></li>
+								<li><em>Type Safety</em></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Notes</h4>
+							<ul>
+								<li><a href="notes/Lec20-Type-Checker.rb">Simple Type Checker (in Ruby)</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapter 6</a></li>
+								<li>Notes on <a href="https://www.cs.cmu.edu/~fp/courses/15312-f04/handouts/04-semantics.pdf">Static Semantics (a.k.a Type Systems)</li>
+								<li><a href="http://www.cs.cmu.edu/~rwh/pfpl/">Practical Foundations for Programming Languages, Chapters 2 &amp; 4</a></li>
+							</ul>
+						</li>
+						<li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment7.pdf">Assignment 7</a>
+									<b>DUE:</b> August 4
+									<br />
+									<a href="homework/assignment8.rb">Assignment 8</a>
+									<b>DUE:</b> August 8
+								</li>
+								<li>
+									<a href="homework/extracredit1.pdf">Extra Credit 1</a>
+									<b>DUE:</b> Last Day of Class
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Binding &amp; Scope</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Variable Binding</em></li>
+								<li><em>Static and Dynamic Scope</em></li>
+								<li><em>Implementing Recursion</em></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapter 7</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment9.pdf">Assignment 9</a>
+									<b>DUE:</b> August 10
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Machines &amp; Effects</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Abstract Machines: Efficient Semantics</em></li>
+								<li><em>Closures: Remember Where You Came From</em></li>
+								<li><em>Mutable State: Changing the World</em></li>
+								<li><em>Raising Exceptions: And Handling the Unexpected</em></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Reading</h4>
+							<ul>
+								<li><a href="https://doi.org/10.1017/CBO9780511804175">Concepts in Programming Languages, Chapter 8</a></li>
+							</ul>
+						</li>
+						<li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/assignment10.rb">Assignment 10</a>
+									<b>DUE:</b> August 15
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h3>Continuations: Capturing the Future</h3>
+					<ul>
+						<li><h4>&bull; Concepts</h4>
+							<ul>
+								<li><em>Continuations in Machines</em></li>
+								<li><em>Programming with Continuations</em></li>
+								<li><em>Continuation-Passing Style</em></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Notes</h4>
+							<ul>
+								<li><a href="notes/Lec31-Programming-Continuations.rb">Programming With Continuations (in Ruby)</a></li>
+								<li><a href="notes/Lec32-Continuation-Passing.rb">Continuation-Passing Style (in Ruby)</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4>&bull; Exercises</h4>
+							<ul>
+								<li>
+									<a href="homework/extracredit2.pdf">Extra Credit 2</a>
+									<b>DUE:</b> Last Day of Class
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</article> <!-- end entry -->
+			
+		</div> <!-- end main -->
+
+	</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul_downen@uml.edu">paul_downen@uml.edu</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
