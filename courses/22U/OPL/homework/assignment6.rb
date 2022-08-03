@@ -499,7 +499,7 @@ def pretty_print_factor(fact)
   #   * If `fact` is the `:times` symbol, then return the string "*"
   #     standing for the multiplication operator.
   #
-  #   * If `fact` is the `:divides` symbol, then return the string "/"
+  #   * If `fact` is the `:divide` symbol, then return the string "/"
   #     standing for the division operator.
   #
   #   * If `fact` is just a numeric expression, matching the pattern
