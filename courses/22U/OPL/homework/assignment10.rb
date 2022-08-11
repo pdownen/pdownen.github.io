@@ -605,7 +605,7 @@ def evaluate(expr, env = $primops)
   # Written this way in terms of the `call` method of the function
   # value, this case corresponds to the big-step evaluation rule:
 
-  #     env ⊢ function ⇓ V    env ⊢ argument ⇓ Vₐ    V₁.call(V₂) ⇓ V'
+  #     env ⊢ function ⇓ V    env ⊢ argument ⇓ Vₐ    V.call(Vₐ) ⇓ V'
   #     --------------------------------------------------------------
   #     env ⊢ function argument ⇓ V'
 
