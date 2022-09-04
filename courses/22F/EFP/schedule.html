@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>EFP - COMP 4600/5300</title>
+	<meta name="description" content="Effective Functional Programming">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css"> 
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+   	<div class="row">
+
+   		<div class="header-content twelve columns">
+
+		    <h1 id="logo-text"><a href="index.html" title="">Effective Functional Programming</a></h1>
+			<p id="intro">COMP 4600/5300 - 205</p>
+
+		</div>			
+
+	</div>
+
+	<nav id="nav-wrap"> 
+
+	<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+	<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+	<div class="row">    		            
+
+		<ul id="nav" class="nav">
+			<li><a href="index.html">Info</a></li>
+			<li class="has-children"><a href="resources.html">Resources</a>
+				<ul>
+					<li><a href="resources.html#class">Class</a></li>
+					<li><a href="resources.html#texts">Texts</a></li>
+					<li><a href="resources.html#code">Code</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="schedule.html">Schedule</a></li>	
+			<li class="has-children"><a href="policy.html">Policy</a>
+				<ul>
+					<li><a href="policy.html#grades">Grades</a></li>
+					<li><a href="policy.html#assignments">Assignments</a></li>
+					<li><a href="policy.html#rules">Rules</a></li>
+				</ul>
+			</li>
+		</ul> <!-- end #nav -->			   	 
+
+	</div> 
+
+	</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+   	<div class="row">
+
+   		<div id="main" class="ten columns">
+
+			<article class="entry">
+				<header class="entry-header">
+					<h2 class="entry-title">
+						At a glance...
+					</h2>
+				</header>
+
+				<div class="entry-content">
+					<style>
+						td { padding: 0.5ex 2ex; }
+					</style>
+
+					<table>
+						<tr>
+							<th>Assignment</th>
+							<th>Due Date</th>
+						</tr>
+						<tr>
+							<td><a href="homework/assignment0.pdf">Assignment 0</a></td>
+							<td>September 19</td>
+						</tr>
+						<tr>
+							<td><a href="homework/assignment1.pdf">Assignment 1</a></td>
+							<td>September 26</td>
+						</tr>
+						<tr>
+							<td><a href="homework/assignment2.pdf">Assignment 2</a></td>
+							<td>October 11</td>
+						</tr>
+						<tr>
+							<td><a href="homework/assignment3.pdf">Assignment 3</a></td>
+							<td>October 31</td>
+						</tr>
+						<tr>
+							<td><a href="homework/assignment4.pdf">Assignment 4</a></td>
+							<td>November 14</td>
+						</tr>
+						<tr>
+							<td>Project Proposal</td>
+							<td>November 21</td>
+						</tr>
+						<tr>
+							<td>Final Project</td>
+							<td>December 12</td>
+						</tr>
+					</table>
+				</div>
+			</article>
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 1&ndash;2: Pure Functional Programs
+					</h2>
+				</header>
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Recursion, pattern matching, guards, higher-order functions, list comprehensions</li>
+						<li>Algebraic data types, type classes, polymorphism</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Real World Haskell: chapters 2, 3, 6</li>
+						<li>Yorgey's Intro: chapters 1-5</li>
+					</ul>
+
+					<h3>Exercises</h3>
+					<ul>
+						<li>
+							<a href="homework/assignment0.pdf">Assignment 0 (Hello, World!)</a>
+							<b>DUE:</b> September 19
+						</li>
+						<li>
+							<a href="homework/assignment1.pdf">Assignment 1 (Card Games)</a>
+							<b>DUE:</b> September 26
+						</li>
+					</ul>
+
+					<h3>Notes</h3>
+					<ul>
+						<li><a href="notes/Lecture1.hs">Lecture 1</a></li>
+						<li><a href="notes/Lecture2.hs">Lecture 2</a></li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 3&ndash;4: User Interaction
+					</h2>
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Input/output, console programs</li>
+						<li>Error handling, references</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Real World Haskell: chapters 4, 5, 7</li>
+					</ul>
+
+					<h3>Exercises</h3>
+					<ul>
+						<li>
+							<a href="homework/assignment2.pdf">Assignment 2 (Blackjack)</a>
+							<b>DUE:</b> October 11
+						</li>
+					</ul>
+
+					<h3>Notes</h3>
+					<ul>
+						<li><a href="notes/Lecture3.zip">Lecture 3</a></li>
+						<li><a href="notes/Lecture4.zip">Lecture 4</a></li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 5&ndash;6: Getting It Right
+					</h2>
+				</header>
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Property-based testing</li>
+						<li>Equational reasoning</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Real World Haskell: chapter 11</li>
+						<li><a href="https://www.schoolofhaskell.com/user/pbv/an-introduction-to-quickcheck-testing">An Introduction to QuickCheck testing</a></li>
+						<li><a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">Talk on QuickCheck by John Huges (Lecture 4 of "Monads and all that")</a></li>
+						<li><a href="https://www.cs.tufts.edu/~nr/cs257/archive/richard-bird/sudoku.pdf">A Program to Solve Sudoku</a></li>
+					</ul>
+
+					<h3>References</h3>
+					<ul>
+						<li><a href="http://hspec.github.io/">User Manual on Hspec</a></li>
+						<li>The <a href="https://hackage.haskell.org/package/QuickCheck">QuickCheck</a> and <a href="https://hackage.haskell.org/package/hspec">Hspec</a> packages</li>
+					</ul>
+
+					<h3>Exercises</h3>
+					<ul>
+						<li>
+							<a href="homework/assignment3.pdf">Assignment 3 (Red-Black Trees)</a>
+							<b>DUE:</b> October 31
+						</li>
+					</ul>
+
+					<h3>Notes</h3>
+					<ul>
+						<li><a href="notes/Lecture5.zip">Lecture 5</a></li>
+						<li><a href="notes/Lecture6.lhs">Lecture 6</a></li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 7&ndash;8: Effect APIs
+					</h2>
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Functors, Applicative Functors</li>
+						<li>Monads</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Real World Haskell: chapters 14-15</li>
+						<li>Learn You a Haskell: chapters 11-13</li>
+						<li><a href="http://blog.sigfpe.com/2006/08/you-could-have-invented-monads-and.html">You Could Have Invented Monads! (And Maybe You Already Have.)</a></li>
+					</ul>
+
+					<h3>Exercises</h3>
+					<ul>
+						<li>
+							<a href="homework/assignment4.pdf">Assignment 4 (Calculator)</a>
+							<b>DUE:</b> November 14
+						</li>
+					</ul>
+
+					<h3>Notes</h3>
+					<ul>
+						<li><a href="notes/Lecture7.hs">Lecture 7</a></li>
+						<li><a href="notes/Lecture8.hs">Lecture 8</a></li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 9&ndash;10: Effectful programming
+					</h2>
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Non-determinism, continuations</li>
+						<li>Parsing</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Real World Haskell: chapter 16</li>
+						<li>Write Yourself a Scheme: chapter 2</li>
+					</ul>
+
+					<h3>References</h3>
+					<ul>
+						<li>The <a href="https://hackage.haskell.org/package/probability">probability</a> package</li>
+						<li>The <a href="https://hackage.haskell.org/package/parsec">parsec</a> package</li>
+					</ul>
+
+					<h3>Notes</h3>
+					<ul>
+						<li><a href="notes/Lecture9.zip">Lecture 9</a></li>
+						<li><a href="notes/Lecture10.zip">Lecture 10</a></li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h1 class="entry-title">
+						Project Proposal: DUE November 21
+					</h1>
+				</header>
+
+			</article>
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 11: Laziness (With Class)
+					</h2>
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Laziness, infinite data</li>
+						<li>Functional Object-Oriented Programming</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Yorgey's Intro: chapter 6</li>
+						<li><a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">Why Functional Programming Matters</a> - a collection of practical examples, including numerical methods &amp; minimax AI</li>
+						<li><a href="http://blog.sigfpe.com/2006/11/from-l-theorem-to-spreadsheet.html">From Löb's Theorem to Spreadsheet Evaluation</a></li>
+					</ul>
+
+					<h3>Notes</h3>
+					<ul>
+						<li><a href="notes/Lecture11.hs">Lecture 11</a></li>
+					</ul>
+
+					<h3>Bonus Exercises</h3>
+					<ul>
+						<li>
+							<a href="homework/nmfp.pdf">Bonus Assignment (Numerical Methods with Functional Programming in Python)</a>. You can use <a href="homework/nmfp_template.py">this template</a> to fill in your answers.
+						</li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 12&ndash;13: Parallelism and Concurrency
+					</h2>
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Parallel annotations, array processing</li>
+						<li>MVars, Software Transactional Memory (STM)</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Real World Haskell: chapters 24, 28</li>
+						<li><a href="https://www.schoolofhaskell.com/school/advanced-haskell/beautiful-concurrency">Beautiful Concurrency</a>: <a href="https://www.schoolofhaskell.com/school/advanced-haskell/beautiful-concurrency/4-the-santa-claus-problem">The Santa Claus Problem</a></li>
+					</ul>
+
+					<h3>References</h3>
+					<ul>
+						<li>The <a href="https://hackage.haskell.org/package/accelerate">accelerate</a> and <a href="https://hackage.haskell.org/package/stm">stm</a> packages</li>
+					</ul>
+				</div>
+
+				<h3>Notes</h3>
+				<ul>
+					<li><a href="notes/Lecture12.zip">Lecture 12</a></li>
+					<li><a href="notes/Lecture13.zip">Lecture 13</a></li>
+					<li><a href="notes/Lecture14.zip">Lecture 14</a></li>
+				</ul>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h1 class="entry-title">
+						Final Project: DUE December 12
+					</h1>
+				</header>
+
+			</article>
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h1 class="entry-title">
+						Additional Topics
+					</h1>
+				</header>
+
+			</article>
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						More Monads!
+					</h2>
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Monad transformers</li>
+						<li>Free monads, interpreters</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Real World Haskell: chapter 18</li>
+						<li>Haskell Wikibooks: <a href="https://en.wikibooks.org/wiki/Haskell/Monad_transformers">Monad Transformers</a></li>
+					</ul>
+
+					<h3>References</h3>
+					<ul>
+						<li>The <a href="https://hackage.haskell.org/package/transformers">transformers</a>, <a href="https://hackage.haskell.org/package/mtl">mtl</a>, and <a href="https://hackage.haskell.org/package/free">free</a> packages</li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Fancy Types
+					</h2>
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>GADTs, indexed types</li>
+						<li>Higher-rank polymorphism</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li>Haskell Wikibooks: <a href="https://en.wikibooks.org/wiki/Haskell/GADT">GADTs</a></li>
+						<li><a href="https://ocharles.org.uk/blog/guest-posts/2014-12-18-rank-n-types.html">Rank N Types</a></li>
+						<li><a href="https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/a-little-lens-starter-tutorial">A Little Lens Starter Tutorial</a></li>
+						<li>Haskell Wikibooks: <a href="https://en.wikibooks.org/wiki/Haskell/Lenses_and_functional_references">Lenses and functional references</a></li>
+					</ul>
+
+					<h3>References</h3>
+					<ul>
+						<li>The <a href="https://hackage.haskell.org/package/lens">lens</a> package</li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<!-- <article class="entry">
+
+				<header class="entry-header">
+
+					<h2 class="entry-title">
+						Domain-Specific Languages
+					</h2> 				 
+										
+				</header> 
+				
+				<div class="entry-content">
+					<h3>Topics</h3>
+					<ul>
+						<li>Lenses</li>
+						<li>DSLs versus APIs</li>
+					</ul>
+
+					<h3>Reading</h3>
+					<ul>
+						<li><a href="https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/a-little-lens-starter-tutorial">A Little Lens Starter Tutorial</a></li>
+						<li>Haskell Wikibooks: <a href="https://en.wikibooks.org/wiki/Haskell/Lenses_and_functional_references">Lenses and functional references</a></li>
+					</ul>
+
+					<h3>References</h3>
+					<ul>
+						<li>The <a href="https://hackage.haskell.org/package/lens">lens</a> package</li>
+					</ul>
+
+				</div>
+
+			</article> --> <!-- end entry -->
+			
+		</div> <!-- end main -->
+
+	</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul_downen@uml.edu">paul_downen@uml.edu</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
