@@ -4,8 +4,8 @@ module Lecture1 where
 
 -- Module import.  We will need the following functions
 --
--- >  ord :: Char -> Int
--- >  chr :: Int  -> Char
+--     ord :: Char -> Int
+--     chr :: Int  -> Char
 --
 -- from the Data.Char module.
 import Data.Char
@@ -47,14 +47,14 @@ increment x = let y = x+1
 
 -- The contradiction function always returns False.
 --
--- >  contradiction x = False
+--     contradiction x = False
 --
 contradiction :: Bool -> Bool
 contradiction x = x && not x
 
 -- The excludedMiddle function always returns True.
 --
--- >  excludedMiddle x = True
+--     excludedMiddle x = True
 --
 excludedMiddle x = x || not x
 
@@ -122,11 +122,9 @@ factorial n = product [1..n]
 -- matching on the given list.  The two cases for a list is an empty list
 -- (written []) or a list with the first element x and remaining elements xs
 -- (written x:xs).
-_product :: [Integer] -> Integer
-_product []     = 1
-_product (x:xs) = x * _product xs
--- Here, I use the name _product to avoid clashing with the similar function
--- named product that is implicitly imported from the Prelude.
+prod :: [Integer] -> Integer
+prod []     = 1
+prod (x:xs) = x * prod xs
 
 
 ----------------------
@@ -139,18 +137,19 @@ _product (x:xs) = x * _product xs
 -- reached, then the cipher wraps back around to the beginning again.  For
 -- example
 --
--- >  caesar 3 "c" = "f"
--- >  caesar 1 "z" = "a"
+--     caesar 3 "c" = "f"
+--     caesar 1 "z" = "a"
 
 -- Rotate a letter c n positions down the alphabet, which is all characters
 -- between 'start' and 'end'. The 'ord' function converts a Char to an Int, and
 -- 'chr' converts an Int back to a Char.
 rotateRange :: Char -> Char -> Int -> Char -> Char
-rotateRange start end n c = c'
-  where range    = ord end - ord start + 1
-        position = ord c - ord start
-        rotated  = (position + n) `mod` range
-        c'       = chr (rotated + ord start)
+rotateRange start end n c =
+  let range    = ord end - ord start + 1
+      position = ord c - ord start
+      rotated  = (position + n) `mod` range
+      c'       = chr (rotated + ord start)
+  in  c'
 
 -- Rotate a lowercase letter found in the alphabet between 'a' and 'z'
 rotateLower n c = rotateRange 'a' 'z' n c
@@ -165,7 +164,7 @@ rotateUpper = rotateRange 'A' 'Z'
 -- exactly the same as the expanded form which supplies all four arguments to
 -- 'rotateRange':
 --
--- >  rotateUpper n x = rotateRange 'A' Z' n c
+--     rotateUpper n x = rotateRange 'A' Z' n c
 
 -- Rotate a single numeric digit character between '0' and '9'
 rotateDigit = rotateRange '0' '9'
@@ -173,8 +172,8 @@ rotateDigit = rotateRange '0' '9'
 -- Check if the 'ord' of a character 'c' is within a specified range between
 -- 'start' and 'end'.
 --
--- >  inRange 'a' 'z' 'q' = True
--- >  inRange 'a' 'z' 'Q' = False
+--     inRange 'a' 'z' 'q' = True
+--     inRange 'a' 'z' 'Q' = False
 --
 inRange start end c = ord start <= ord c && ord c <= ord end
 
@@ -210,8 +209,8 @@ caesar n (c:str) = rotateLetter n c : caesar n str
 -- Note that anything besides ASCII alpha-numeric characters are left unchanged,
 -- since we did not define how to rotate them. For example
 --
--- >  caesar 2 "jalapeno" = "lcncrgpq"
--- >  caesar 2 "jalapeño" = "lcncrgñq"
+--     caesar 2 "jalapeno" = "lcncrgpq"
+--     caesar 2 "jalapeño" = "lcncrgñq"
 --
 -- where the numbers in the string have been discarded.
 
@@ -222,15 +221,15 @@ caesar n (c:str) = rotateLetter n c : caesar n str
 
 -- The reverse of the Caesar cipher rotates in the other direction
 --
--- >  uncaesar n str = caesar (-n) str
--- >  uncaesar n (caesar n str) = str
+--     uncaesar n str = caesar (-n) str
+--     uncaesar n (caesar n str) = str
 --
 uncaesar :: Int -> String -> String
 uncaesar n str = [ rotateLetter (-n) c | c <- str, isAlpha c ]
 -- In the above, the 'c <- str' draws each character out of the String str one
 -- at a time, in order. For each character c, the expression
 --
--- >  rotateLetter (-n) c
+--     rotateLetter (-n) c
 --
 -- becomes the element in the new list. Additionally, the condition 'isAlpha c'
 -- is checked; if it evaluates to False, then that element is skipped entirely.
@@ -240,16 +239,16 @@ uncaesar n str = [ rotateLetter (-n) c | c <- str, isAlpha c ]
 -- halfway through the alphabet of 26 characters, so rot13 is the same forwards
 -- and backwards on messages made up of only alphabetic ASCII characters.
 --
--- >  rot13 "bonjour" = "obawbhe"
--- >  rot13 (rot13 "bonjour") = "bonjour"
+--     rot13 "bonjour" = "obawbhe"
+--     rot13 (rot13 "bonjour") = "bonjour"
 --
 rot13 :: String -> String
 rot13 str = caesar 13 str
 -- 'rot13' does not have the same self-reversing property when used on numeric
 -- digits, because there are 10 different digits, rather than 26. For example,
 --
--- >  rot13 "9876543210" = "2109876543"
--- >  rot13 (rot13 "9876543210") = "5432109876"
+--     rot13 "9876543210" = "2109876543"
+--     rot13 (rot13 "9876543210") = "5432109876"
 --
 -- (Hmm: How many applications of rot13 does it take to cycle "9876543210" back
 -- to itself?)
@@ -263,8 +262,8 @@ applyTimes n f x = f (applyTimes (n-1) f x)
 -- of the total number of digits 10. That way, 'rot5' is the same forwards and
 -- backwards on strings made up of only numeric digits.
 --
--- >  rot5 "9876543210" = "4321098765"
--- >  rot5 (rot5 "9876543210") = "9876543210"
+--     rot5 "9876543210" = "4321098765"
+--     rot5 (rot5 "9876543210") = "9876543210"
 --
 rot5 :: String -> String
 rot5 = caesar 5
@@ -272,4 +271,4 @@ rot5 = caesar 5
 -- to caesar (the key) but not the second (the message to encode), we get a
 -- specialized caesar cipher with the key 5. This definition is the same as:
 --
--- >  rot5 str = caesar 5 str
+--     rot5 str = caesar 5 str
