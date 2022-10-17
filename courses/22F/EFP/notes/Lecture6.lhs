@@ -18,7 +18,7 @@ Exponentials
 
 Here's an easy definition of the exponential function.
 
-> easyExp :: (Num a, Num b, Eq b) => a -> b -> a
+> easyExp :: Integer -> Integer -> Integer
 > x `easyExp` 0 = 1
 > x `easyExp` n = x * (x `easyExp` (n-1))
 
@@ -90,7 +90,7 @@ x = y * (fst (x `quotRem` y)) + (snd (x `quotRem` y))
 
 Writing down both separate inductive cases with quotRem in Haskell gives
 
-> binExp :: (Num a, Integral b) => a -> b -> a
+> binExp :: Integer -> Integer -> Integer
 > x `binExp` 0 = 1
 > x `binExp` n = case n `quotRem` 2 of
 >                  (q,0) -> (x*x) `binExp` q
