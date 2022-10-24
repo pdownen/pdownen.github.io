@@ -191,6 +191,22 @@ class Functor m => Applicative m where
   -- <*> (read as "app") does fancy function application.
   (<*>) :: m (a -> b) -> m a -> m b
 
+-- Note that the standard library gives an operator name to regular function
+-- application.
+($) :: (a -> b) -> a -> b
+f $ x = f x
+
+infixr 0 $
+-- The right-associative infix declration, 'infixr 0 $', means that the $
+-- operator has the *lowest* possible precedence, and groups to the right.  That
+-- way, you can write
+--
+--     f $ g $ h $ x * x
+--
+-- and the parser will automatically insert parenthesis to see
+--
+--     f (g (h (x * x)))
+
 -- By analogy, we can also define an operator (<$>) that is a synonym for the
 -- generic Functor fmap.
 (<$>) :: Functor m => (a -> b) -> m a -> m b
@@ -534,8 +550,3 @@ infixr 9 .
 --     pure f <*> pure x = pure (f x)                  (homomorphism)
 --     u <*> pure x = pure ($ x) <*> u                 (interchange)
 --     pure (.) <*> w <*> u <*> v = w <*> (u <*> v)    (composition)
-
-($) :: (a -> b) -> a -> b
-f $ x = f x
-
-infixr 0 $
