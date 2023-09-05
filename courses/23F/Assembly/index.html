@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Assembly - COMP 2030</title>
+	<meta name="description" content="Assembly Language Programming">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css">
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+		<div class="row">
+			<div class="header-content twelve columns">
+				<h1 id="logo-text"><a href="index.html" title="">Assembly Lang. Programming</a></h1>
+				<p id="intro">COMP 2030</p>
+			</div>
+		</div>
+
+		<nav id="nav-wrap"> 
+
+			<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+			<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+			<div class="row">
+				<ul id="nav" class="nav">
+					<li class="current"><a href="index.html">Info</a></li>
+					<li class="has-children"><a href="resources.html">Resources</a>
+						<ul>
+							<li><a href="resources.html#class">Class</a></li>
+							<li><a href="resources.html#texts">Texts</a></li>
+							<li><a href="resources.html#code">Code</a></li>
+						</ul>
+					</li>
+					<li><a href="schedule.html">Schedule</a></li>	
+					<li class="has-children"><a href="policy.html">Policy</a>
+						<ul>
+							<li><a href="policy.html#grades">Grades</a></li>
+							<li><a href="policy.html#success">Success</a></li>
+							<li><a href="policy.html#rules">Rules</a></li>
+						</ul>
+					</li>
+				</ul> <!-- end #nav -->
+			</div> 
+
+		</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+		<div class="row">
+
+			<div id="main" class="ten columns">
+
+				<article class="entry">
+
+					<header class="entry-header">
+						<h2 class="entry-title">Synopsis</h2>
+					</header> 
+					
+					<div class="entry-content">
+						<ul>
+							<li>Term: Fall 2023</li>
+							<li>Time: Mon., Wed., Fri. 2:00pm &ndash; 2:50pm</li>
+							<li>Place: Shah Hall, Room 310 (North Campus) </li>
+							<li>Intructor: Paul Downen &lt;<a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>&gt;</li>
+							<li>Office: Dandeneau Hall, Room 305</li>
+							<li>Office Hours: Mon+Fri 3:00pm &ndash; 5:00pm, or by appointment</li>
+							<li>TA: Nazim Ahmed Belabbaci &lt;<a href="mailto:NazimAhmed_Belabbaci@student.uml.edu">NazimAhmed_Belabbaci@student.uml.edu</a>&gt;</li>
+						</ul>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+				
+					<header class="entry-header">
+						<h2 class="entry-title">
+							Class Description
+						</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							Internal operations of computers at the machine level are studied.
+							The organization and operation of a conventional computer are examined by studying
+							principal instruction types,
+							data representation,
+							addressing modes,
+							program control, and
+							I/O.
+							Assembly language programming, including
+							instruction mnemonics,
+							symbolic addresses,
+							assembler directives,
+							system calls, and
+							macros,
+							is practiced through the usage of
+							text editors,
+							symbolic debuggers, and
+							loaders.
+							Staring from an assembly pseudocode based on common structured imperitive languages,
+							two specific assembly languages will be used:
+							MIPS and
+							Intel x86.
+						</p>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+
+					<header class="entry-header">
+						<h2 class="entry-title">Class Objectives</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							Upon completion of this course, students will be able to:
+							<ol>
+								<li>
+									Describe the basic components of a computer.
+								</li>
+								<li>
+									Describe how different types of data, including floating point numbers, are represented in the computer.
+								</li>
+								<li>
+									Understand MIPS and Intel x86 machines as representatives of RISC (Reduced Instruction Set Computer) and CISC (Complex ISC) architectures.
+								</li>
+								<li>
+									Write programs in the MIPS assembly language with the following features:
+									assignment statements,
+									input and output, strings,
+									conditional execution,
+									procedures,
+									arrays,
+									records, and
+									recursion.
+								</li>
+								<li>
+									Describe how different addressing modes work.
+								</li>
+								<li>
+									Describe how to use pseudocode in guiding structured assembly language programming.
+								</li>
+								<li>
+									Describe and demonstrate how to covert an assembly language program into a corresponding C program.
+								</li>
+								<li>
+									Describe how memory is organized.
+								</li>
+								<li>
+									Understand how Intel x86 assembly code is generated from C programs.
+								</li>
+								<li>
+									Demonstrate and discuss how combinational logic components may be used to build an Arithmetic Logic Unit.
+								</li>
+								<li>
+									Demonstrate and discuss how combinational and sequential logic components may be used to implement a simple single-cycle computer.
+								</li>
+							</ol>
+						</p>
+					</div>
+
+				</article>
+
+				<article class="entry">
+				
+					<header class="entry-header">
+						<h2 class="entry-title">Prerequisites</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							Prerequisite: COMP.1020 &ndash; Computing II
+						</p>
+						<p>
+							Suggested prerequisite: EECE.2650 &ndash; Logic Design
+						</p>
+						<p>	
+							Students should be comfortable with structured programming concepts
+							(loops, conditionals, etc.)
+							and be able to write basic algorithms in in an imperative language like C or C++.
+							Digital logic hardware and design
+							(logic gates, latches, arithmetic circuits, etc.)
+							is a plus, but not necessary.
+						</p>
+					</div> 
+
+				</article> <!-- end entry -->  
+
+			</div> <!-- end main -->
+
+		</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
