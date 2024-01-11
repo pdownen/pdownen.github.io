@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Assembly - COMP 2030</title>
+	<meta name="description" content="Assembly Language Programming">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css"> 
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+   	<div class="row">
+
+   		<div class="header-content twelve columns">
+
+		    <h1 id="logo-text"><a href="index.html" title="">Assembly Lang. Programming</a></h1>
+			<p id="intro">COMP 2030</p>
+
+		</div>			
+
+	</div>
+
+	<nav id="nav-wrap"> 
+
+	<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+	<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+	<div class="row">    		            
+
+		<ul id="nav" class="nav">
+			<li><a href="index.html">Info</a></li>
+			<li class="has-children"><a href="resources.html">Resources</a>
+				<ul>
+					<li><a href="resources.html#class">Class</a></li>
+					<li><a href="resources.html#texts">Texts</a></li>
+					<li><a href="resources.html#code">Code</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="schedule.html">Schedule</a></li>	
+			<li class="has-children"><a href="policy.html">Policy</a>
+				<ul>
+					<li><a href="policy.html#grades">Grades</a></li>
+					<li><a href="policy.html#success">Success</a></li>
+					<li><a href="policy.html#rules">Rules</a></li>
+				</ul>
+			</li>
+		</ul> <!-- end #nav -->			   	 
+
+	</div> 
+
+	</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+   	<div class="row">
+
+   		<div id="main" class="ten columns">
+
+				<article class="entry" id="overview">
+					<header class="entry-header">
+						<h2 class="entry-title">
+							Overview
+						</h2>
+					</header>
+
+					<div class="entry-content">
+						<style>
+							td { padding: 0.5ex 2ex; }
+						</style>
+						
+						<table>
+							<tr>
+								<th>Week</th>
+								<th>Topic</th>
+							</tr>
+							<tr>
+								<td>0.5</td>
+								<td>Welcome To the Machine</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Bits, Bytes, &amp; Numbers</td>
+							</tr>
+							<tr>
+								<td>2, 3</td>
+								<td>Goto MIPS</td>
+							</tr>
+							<tr>
+								<td>4, 5</td>
+								<td>Data Representations: integers &amp; floating-points </td>
+							</tr>
+							<tr>
+								<td>7, 8</td>
+								<td>Intel x86: architecture instruction set, &amp; procedures</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Logic design &amp; Y86 architecture</td>
+							</tr>
+							<tr>
+								<td>10, 11</td>
+								<td>CPU Control Design</td>
+							</tr>
+							<tr>
+								<td>12, 13</td>
+								<td>Optimization: pipelining &amp; data dependency</td>
+							</tr>
+						</table>
+					</div>
+				</article>
+				
+				<article class="entry" id="exam">
+					<header class="entry-header">
+						<h2 class="entry-title">
+							Tests
+						</h2>
+					</header>
+
+					<div class="entry-content">
+						<style>
+							td { padding: 0.5ex 2ex; }
+						</style>
+						
+						<table>
+							<tr>
+								<th>Date</th>
+								<th>Exam</th>
+							</tr>
+							<tr>
+								<td>10/13</td>
+								<td>In-class Test 1</td>
+							</tr>
+							<tr>
+								<td>11/27</td>
+								<td>In-class Test 2</td>
+							</tr>
+							<tr>
+								<td>12/22</td>
+								<td>Final Exam (8am - 11am)</td>
+							</tr>
+						</table>
+					</div>
+				</article>
+
+				<article class="entry" id="homework">
+					<header class="entry-header">
+						<h2 class="entry-title">
+							Homework
+						</h2>
+					</header>
+
+					<div class="entry-content">
+						<style>
+							td { padding: 0.5ex 2ex; }
+						</style>
+						
+						<table>
+							<tr>
+								<th>Due</th>
+								<th>Assignment</th>
+							</tr>
+							<tr>
+								<td>1/22</td>
+								<td><a href="homework/hw1.docx">Homework 1</td>
+							</tr>
+							<tr>
+								<td>1/29</td>
+								<td><a href="homework/hw2.docx">Homework 2</td>
+							</tr>
+							<tr>
+								<td>2/5</td>
+								<td><a href="homework/hw3.docx">Homework 3</td>
+							</tr>
+							<tr>
+								<td>2/20</td>
+								<td><a href="homework/hw4.docx">Homework 4</td>
+							</tr>
+							<tr>
+								<td>3/1</td>
+								<td><a href="homework/hw5.docx">Homework 5</td>
+							</tr>
+							<tr>
+								<td>3/22</td>
+								<td><a href="homework/hw6.docx">Homework 6</td>
+							</tr>
+							<tr>
+								<td>4/1</td>
+								<td><a href="homework/hw7.docx">Homework 7</td>
+							</tr>
+							<tr>
+								<td>4/22</td>
+								<td><a href="homework/hw8_bomb.docx">Homework 8</td>
+							</tr>
+						</table>
+					</div>
+				</article>
+				
+				<article class="entry" id="lectures">
+					<header class="entry-header">
+						<h2 class="entry-title">
+							Lectures
+						</h2>
+					</header>
+
+					<div class="entry-content">
+						<style>
+							td { padding: 0.5ex 2ex; }
+						</style>
+						
+						<table>
+							<tr>
+								<th>Date</th>
+								<th>Topic</th>
+								<th>Do</th>
+								<th>Read</th>
+								<th>Note</th>
+							</tr>
+							<tr>
+								<td><s>1/15</s></td>
+								<td><b>No Class</b></td>
+								<td></td>
+								<td></td>
+								<td>MLK Jr Day</td>
+							</tr>
+							<tr>
+								<td>1/17</td>
+								<td>Introduction</td>
+								<td>Begin: <a href="homework/hw1.docx">HW 1</a></td>
+								<td>Ch. 1</td>
+								<td><a href="notes/01a_intro.pptx">slides</a></td>
+							</tr>
+							<tr>
+								<td>1/19</td>
+								<td>Pseudo C - Goto</td>
+								<td></td>
+								<td>Ch. 1</td>
+								<td><a href="notes/01b_pseudo-C.pptx">slides</a></td>
+							</tr>
+							<tr>
+								<td>1/22</td>
+								<td>Pseudo C - Assembly</td>
+								<td>Due: <a href="homework/hw1.docx">HW 1</a></td>
+								<td>Ch. 1</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>1/24</td>
+								<td>Number Bases</td>
+								<td>Begin: <a href="homework/hw2.docx">HW 2</a></td>
+								<td>Ch. 2.1</td>
+								<td><a href="notes/02a_number.pptx">slides</a></td>
+							</tr>
+							<tr>
+								<td>1/26</td>
+								<td>Characters &amp; Words</td>
+								<td></td>
+								<td>Ch. 2.1</td>
+								<td><a href="notes/02b_char.pptx">slides</a></td>
+							</tr>
+							<tr>
+								<td>1/29</td>
+								<td>MIPS - First Look at Assembly</td>
+								<td>Due: <a href="homework/hw2.docx">HW 2</a></td>
+								<td></td>
+								<td>
+									<a href="notes/03a_mips1.pptx">slides</a>
+									<br/>
+									<a href="notes/mips1.asm">code</a>
+								</td>
+							</tr>
+							<tr>
+								<td>1/31</td>
+								<td>MIPS - Loops &amp Memory</td>
+								<td>Begin: <a href="homework/hw3.docx">HW 3</a></td>
+								<td></td>
+								<td>
+									<a href="notes/03b_mips2.pptx">slides</a>
+									<br/>
+									<a href="notes/fact_loop.asm">loops</a>,
+									<a href="notes/sum_array.asm">arrays</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2/2</td>
+								<td>MIPS - Functions &amp; Structures</td>
+								<td></td>
+								<td></td>
+								<td>
+									slides <a href="notes/03c_mips3.pptx">1</a>
+									&amp; <a href="notes/03d_mips5.pptx">2</a>
+									<br/>
+									<a href="notes/lowercase.asm">ASCII</a>,
+									<a href="notes/fact_fun.asm">functions</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2/5</td>
+								<td>Stack Data</td>
+								<td>Due: <a href="homework/hw3.docx">HW 3</a></td>
+								<td></td>
+								<td><a href="notes/stacks.asm">stacks</a></td>
+							</tr>
+							<tr>
+								<td>2/7</td>
+								<td>Recursive Functions</td>
+								<td>Begin: <a href="homework/hw4.docx">HW 4</a></td>
+								<td></td>
+								<td>
+									<a href="notes/fact_fun.asm">factorial</a>,
+									<a href="notes/trees.asm">trees</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2/9</td>
+								<td>MIPS Programming</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>2/12</td>
+								<td>Finite Automata</td>
+								<td></td>
+								<td></td>
+								<td><a href="notes/03f_automata.pptx">slides</a></td>
+							</tr>
+							<tr>
+								<td>2/14</td>
+								<td>Boolean Operations</td>
+								<td></td>
+								<td>Ch. 2.1</td>
+								<td><a href="notes/04a_boolean.pptx">slides</a></td>
+							</tr>
+							<tr>
+								<td>2/16</td>
+								<td>1 &amp; 2's Complement</td>
+								<td></td>
+								<td>Ch. 2.2</td>
+								<td>
+									slides
+									<a href="notes/04b_int1.ppt">1</a>
+									&amp;
+									<a href="notes/04c_int2.ppt">2</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2/20</td>
+								<td>Integer Operations</td>
+								<td>Due: <a href="homework/hw4.docx">HW 4</a></td>
+								<td>Ch. 2.3</td>
+								<td><a href="notes/04d_int3.ppt">slides</a></td>
+							</tr>
+							<tr>
+								<td><s>2/19</ss></td>
+								<td><b>No class</b></td>
+								<td></td>
+								<td></td>
+								<td>President's Day</td>
+							</tr>
+							<tr>
+								<td>2/21</td>
+								<td>Test 1</td>
+								<td>Begin: <a href="homework/hw5.docx">HW 5</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>2/23</td>
+								<td>Fixed &amp; Floating Point</td>
+								<td></td>
+								<td>Ch. 2.4</td>
+								<td><a href="notes/05a_fp1.pptx">slides</a></td>
+							</tr>	
+							<tr>
+								<td>2/26</td>
+								<td>(De)Normalized Floating Points</td>
+								<td></td>
+								<td>Ch. 2.4</td>
+								<td><a href="notes/05a_fp1.pptx">slides</a></td>
+							</tr>	
+							<tr>
+								<td>2/28</td>
+								<td>Rounding &amp; Arithmetic</td>
+								<td></td>
+								<td>Ch. 2.4</td>
+								<td><a href="notes/05b_fp2.ppt">slides</a></td>
+							</tr>	
+							<tr>
+								<td>3/1</td>
+								<td>Floating-Point Conversion</td>
+								<td>Due: <a href="homework/hw5.docx">HW 5</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><s>3/3 - 3/9</s></td>
+								<td><b>No class</b></td>
+								<td>Begin: <a href="homework/hw6.docx">HW 6</a></td>
+								<td></td>
+								<td>Spring Break</td>
+							</tr>
+							<tr>
+								<td>3/11</td>
+								<td>MIPS Machine Code</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>3/13</td>
+								<td>Assembler Translation</td>
+								<td></td>
+								<td></td>
+								<td><a href="notes/06_assembler.pptx">slides</a></td>
+							</tr>
+							<tr>
+								<td>3/15</td>
+								<td>Evolution of Intel x86</td>
+								<td></td>
+								<td>Ch 3.1 - 3.2</td>
+								<td>
+									<a href="notes/06_x86_1.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3/18</td>
+								<td>x86(-64) Instructions</td>
+								<td></td>
+								<td>Ch 3.3 - 3.5</td>
+								<td>
+									<a href="notes/06_x86_1.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3/20</td>
+								<td>x86(-64) Control Flow</td>
+								<td></td>
+								<td>Ch 3.6</td>
+								<td>
+									<a href="notes/06_x86_control.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3/22</td>
+								<td>Advanced Structured Control</td>
+								<td>Due: <a href="homework/hw6.docx">HW 6</a></td>
+								<td>Ch 3.6</td>
+								<td>
+									<a href="notes/06_x86_control.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3/25</td>
+								<td>x86(-64) Calling Conventions</td>
+								<td>Begin: <a href="homework/hw7.docx">HW 7</a></td>
+								<td>Ch 3.7</td>
+								<td>
+									<a href="notes/06_x863_proc1.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3/27</td>
+								<td>x86(-64) Recursion</td>
+								<td></td>
+								<td>Ch 3.7</td>
+								<td>
+									<a href="notes/06_x863_proc2.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3/29</td>
+								<td>Data Representation</td>
+								<td></td>
+								<td>Ch 3.8 - 3.9</td>
+								<td>
+									<a href="notes/06_x865_data.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4/1</td>
+								<td>Test 2 Review</td>
+								<td>Due: <a href="homework/hw7.docx">HW 7</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>4/3</td>
+								<td>Test 2</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>4/5</td>
+								<td>The Binary Bomb</td>
+								<td>Begin: <a href="homework/hw8.docx">HW 8</a></td>
+								<td></td>
+								<td>
+									<a href="notes/07_binaryBomb.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4/8</td>
+								<td>Pure Digital Logic</td>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="notes/09a_digiLogic.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4/10</td>
+								<td>State and Memory</td>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="notes/09b_seqLogic.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4/12</td>
+								<td>Y86 Design</td>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="notes/10a_Y86.pptx">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td><s>4/15</s></td>
+								<td><b>No Class</b></td>
+								<td></td>
+								<td></td>
+								<td>Patriot's Day</td>
+							</tr>
+							<tr>
+								<td>4/17</td>
+								<td>Y86 Encoding &amp; Control</td>
+								<td></td>
+								<td></td>
+								<td>
+									slides
+									<a href="notes/10b_x86Y86.pptx">1</a>
+									&amp;
+									<a href="notes/10c_Control.pptx">2</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4/19</td>
+								<td>Pipelines &amp; Caching</td>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="notes/12_pipeline.ppt">slides</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4/22</td>
+								<td>Slack day</td>
+								<td>Due: <a href="homework/hw8.docx">HW 8</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>4/24 - 4/26</td>
+								<td>Final Review</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+					</table>
+					</div>
+				</article>
+				
+			</div> <!-- end main -->
+
+		</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
