@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>EFP - COMP 4600/5300</title>
+	<meta name="description" content="Logic, Programs &amp; Verification">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css"> 
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+		<div class="row">
+			<div class="header-content twelve columns">
+				<h1 id="logo-text"><a href="index.html" title="">Logic, Programs &amp; Verification</a></h1>
+				<p id="intro">COMP 4600/5300 - 201</p>
+			</div>
+		</div>
+
+		<nav id="nav-wrap"> 
+
+			<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+			<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+			<div class="row">
+				<ul id="nav" class="nav">
+					<li><a href="index.html">Info</a></li>
+					<li class="has-children"><a href="resources.html">Resources</a>
+						<ul>
+							<li><a href="resources.html#texts">Texts</a></li>
+							<li><a href="resources.html#code">Code</a></li>
+						</ul>
+					</li>
+					<li><a href="exercises.html">Exercises</a></li>	
+					<li class="current"><a href="schedule.html">Schedule</a></li>	
+					<li class="has-children"><a href="policy.html">Policy</a>
+						<ul>
+							<li><a href="policy.html#grades">Grades</a></li>
+							<li><a href="policy.html#assignments">Assignments</a></li>
+							<li><a href="policy.html#rules">Rules</a></li>
+						</ul>
+					</li>
+				</ul> <!-- end #nav -->
+			</div> 
+
+		</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+   	<div class="row">
+
+   		<div id="main" class="ten columns">
+
+			<article class="entry">
+				<header class="entry-header">
+					<h2 class="entry-title">
+						At a glance...
+					</h2>
+				</header>
+
+				<div class="entry-content">
+					<style>
+						td { padding: 0.5ex 2ex; }
+					</style>
+
+					<table>
+						<tr>
+							<th>Progress Report</th>
+							<th>Due Date</th>
+						</tr>
+						<tr>
+							<td>Midterm Check-in</td>
+							<td>March, 19</td>
+						</tr>
+						<tr>
+							<td>Final Check-in</td>
+							<td>April, 30</td>
+						</tr>
+					</table>
+				</div>
+			</article>
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 1: Preliminaries
+					</h2>
+				</header>
+
+				<div class="entry-content">
+					<h3>Reading</h3>
+					<ul>
+						<li>Preface: <tt>Preface.v</tt></li>
+					</ul>
+					
+					<h3>Exercises</h3>
+					<ul>
+						<li>Get Coq up and running on your system</li>
+						<li>Download Software Foundations <a href="https://softwarefoundations.cis.upenn.edu/lf-current/lf.tgz">source files</a></li>
+						<li>Create your <a href="https://git-scm.com">git</a> repository for solutions and proofs</li>
+					</ul>
+				</div>
+				
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 2: Functional Programming
+					</h2>
+				</header>
+				
+				<div class="entry-content">
+					<h3>Reading</h3>
+					<ul>
+						<li>Functional Programming in Coq: <tt>Basics.v</tt></li>
+					</ul>
+					
+					<h3>Topics</h3>
+					<ul>
+						<li>Basic types, enumerations, numbers, booleans</li>
+						<li>Functions and recursion</li>
+						<li>Unit tests</li>
+					</ul>
+
+					<h3>Exercises</h3>
+					<ul>
+						<li>Standard: All 1 and 2 star</li>
+						<li>Advanced: All 3 star</li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+
+			<article class="entry">
+
+				<header class="entry-header">
+					<h2 class="entry-title">
+						Week 3: Induction
+					</h2>
+				</header>
+				
+				<div class="entry-content">
+					<h3>Reading</h3>
+					<ul>
+						<li>Proof by Induction: <tt>Induction.v</tt></li>
+					</ul>
+					
+					<h3>Topics</h3>
+					<ul>
+						<li>Inductive proof tactics, structured proofs</li>
+						<li>Local assertions</li>
+						<li>Formal vs informal proofs</li>
+					</ul>
+
+					<h3>Exercises</h3>
+					<ul>
+						<li>Standard: All 2 star</li>
+						<li>Advanced: All 3 star</li>
+						<li>Challenge: <tt>bin_nat_bin</tt></li>
+					</ul>
+				</div>
+
+			</article> <!-- end entry -->
+			
+		</div> <!-- end main -->
+
+	</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

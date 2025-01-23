@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!--- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>EFP - COMP 4600/5300</title>
+	<meta name="description" content="Logic, Programs &amp; Verification">  
+	<meta name="author" content="Paul Downen">
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">  
+	<link rel="stylesheet" href="css/media-queries.css"> 
+
+	<!-- Script
+	================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" >
+
+</head>
+
+<body>
+
+	<!-- Header
+	================================================== -->
+	<header id="top">
+
+		<div class="row">
+			<div class="header-content twelve columns">
+				<h1 id="logo-text"><a href="index.html" title="">Logic, Programs &amp; Verification</a></h1>
+				<p id="intro">COMP 4600/5300 - 201</p>
+			</div>
+		</div>
+
+		<nav id="nav-wrap"> 
+
+			<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+			<a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+			<div class="row">
+				<ul id="nav" class="nav">
+					<li class="current"><a href="index.html">Info</a></li>
+					<li class="has-children"><a href="resources.html">Resources</a>
+						<ul>
+							<li><a href="resources.html#texts">Texts</a></li>
+							<li><a href="resources.html#code">Code</a></li>
+						</ul>
+					</li>
+					<li><a href="exercises.html">Exercises</a></li>	
+					<li><a href="schedule.html">Schedule</a></li>	
+					<li class="has-children"><a href="policy.html">Policy</a>
+						<ul>
+							<li><a href="policy.html#grades">Grades</a></li>
+							<li><a href="policy.html#assignments">Assignments</a></li>
+							<li><a href="policy.html#rules">Rules</a></li>
+						</ul>
+					</li>
+				</ul> <!-- end #nav -->
+			</div> 
+
+		</nav> <!-- end #nav-wrap --> 	     
+
+	</header> <!-- Header End -->
+
+	<!-- Content
+	================================================== -->
+	<div id="content-wrap">
+
+		<div class="row">
+
+			<div id="main" class="ten columns">
+
+				<article class="entry">
+
+					<header class="entry-header">
+						<h2 class="entry-title">Synopsis</h2>
+					</header> 
+					
+					<div class="entry-content">
+						<ul>
+							<li>Term: Spring 2025</li>
+							<li>Time: Thursday 6:30pm &ndash; 9:20pm</li>
+							<li>Place: Falmouth Hall, Room 313 (North Campus) </li>
+							<li>Intructor: Paul Downen &lt;<a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>&gt;</li>
+							<li>Office: Dandeneau Hall, Room 305</li>
+							<!-- <li>Office Hours: Mon+Fri 3:00pm &ndash; 5:00pm, or by appointment</li>-->
+						</ul>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+				
+					<header class="entry-header">
+						<h2 class="entry-title">
+							Class Description
+						</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							Have you ever been frustrated after spending hours trying to debug
+							a program, but didn't know what the problem was?
+						</p>
+
+						<p>
+							Have you struggled with putting together a proof for a theory
+							class, but didn't know what needs to be said, how it is supposed
+							to come together, or if you made some obscure mistake?
+						</p>
+
+						<p>
+							Do you wish your computer could help you fix these problems,
+							instead of causing more of them?
+						</p>
+
+						<p>
+							Logic, Programs &amp; Verification is about the
+							<em>proofs-as-programs paradigm</em>, where you can learn the
+							tools that can give you confidence that your programs do what you
+							want, as well as instructing your computer to make mathematical
+							proofs for you.  By the end of the semester, you will know how to
+							use formal methods to specify what programs should do, implement
+							software based on that specification, and verify that your code is
+							correct.
+						</p>
+
+						<p>
+							This course will include an introduction to different systems of
+							formal logic and their connection to programming languages.  We
+							will use the relationship between proofs and programs to describe
+							the desired behavior of code in a way a computer can understand,
+							and use formal methods to write machine-checked proofs of
+							correctness.
+						</p>
+
+						<p>
+							On the practical side, this course will offer hands-on experience
+							with software tools known as <em>proof assistants</em> &mdash;
+							specifically <a href="https://coq.inria.fr/">Coq</a> &mdash; to
+							write programs and proofs at the same time.  For exercises, we
+							will use the
+							textbook <a href="https://softwarefoundations.cis.upenn.edu/">Software
+							Foundations</a> that provides both working examples and practice
+							problems.  Students will have time to work on these exercises and
+							get feedback and assistance from the instructor during an in-class
+							lab session (in the second half of the posted class time)
+							following lecture.
+						</p>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+
+					<header class="entry-header">
+						<h2 class="entry-title">Class Objectives</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							At the end of this course, students should be
+							<ul>
+								<li>&bull;
+									able to understand and create formal statements about mathematical theorems or specifications of program behavior,
+								</li>
+								<li>&bull;
+									proficient in using the Coq proof assistant for writing and checking proofs of formal theorems,
+								</li>
+								<li>&bull;
+									knowledgeable in the correspondence between statically typed computer progrrams and formal mathematical proofs,
+								</li>
+								<li>&bull;
+									comfortable in the meaning and writing of informal, "pen-and-paper" proofs.
+								</li>
+							</ul>
+						</p>
+					</div>
+
+				</article>
+
+				<article class="entry">
+				
+					<header class="entry-header">
+						<h2 class="entry-title">Prerequisites</h2>
+					</header>
+
+					<div class="entry-content">
+						<p>
+							Prerequisite: Department approval
+						</p>
+						<p>
+							Suggested prerequisite: Discrete Math, Organization of Programming Languages, Functional Programming, Design of Programming Languages, or equivalent.
+						</p>
+						</p> Students should have some comfortable with basic
+							"pen-and-paper" proofs as seen in classes like Discrete Math or
+							Organization of Programming languages.  write significant programs
+							in some language.  Previous experience with some functional
+							programming (OCaml, Haskell, Scheme, F#, Scala, Clojure, ...) is a
+							plus, but not necessary.
+						</p>
+					</div> 
+
+				</article> <!-- end entry -->  
+
+			</div> <!-- end main -->
+
+		</div> <!-- end row -->
+
+	</div> <!-- end content-wrap -->
+   
+
+	<!-- Footer
+	================================================== -->
+	<footer>
+
+		<div class="row"> 
+
+			<div class="four columns">
+				<h3 class="social">Navigate</h3>
+
+				<ul class="navigate group">
+					<li><a href="index.html">Info</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="policy.html">Policy</a></li>
+				</ul>
+			</div>
+		
+			<div class="eight columns">
+				<h3 class="social">Contact</h3>
+			
+				<ul class="navigate group">
+					<li>Paul Downen &lt;<a href="mailto:paul@pauldownen.com">paul@pauldownen.com</a>&gt;</li>
+					<li>Dandeneau Hall</li>
+					<li><a href="https://www.uml.edu/">University of Massachusetts Lowell</a></li>
+					<li><a href="https://cs.uml.edu/">Department of Computer Science</a></li>
+				</ul>
+			</div>
+					
+			<p class="copyright">Design by <a title="Styleshout" href="https://www.styleshout.com/">Styleshout</a>.</p>
+			
+		</div> <!-- End row -->
+
+		<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+	</footer> <!-- End Footer-->
+
+
+	<!-- Java Script
+	================================================== -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
