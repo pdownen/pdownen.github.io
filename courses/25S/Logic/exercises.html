@@ -59,12 +59,18 @@
 							<li><a href="resources.html#code">Code</a></li>
 						</ul>
 					</li>
-					<li class="current"><a href="exercises.html">Exercises</a></li>	
+					<li class="current" class="has-children"><a href="exercises.html">Exercises</a>
+						<ul>
+							<li><a href="exercises.html#exercises">Exercises</a></li>
+							<li><a href="exercises.html#todo">To Do</a></li>
+							<li><a href="exercises.html#organization">Organization</a></li>
+						</ul>
+					</li>	
 					<li><a href="schedule.html">Schedule</a></li>	
 					<li class="has-children"><a href="policy.html">Policy</a>
 						<ul>
 							<li><a href="policy.html#grades">Grades</a></li>
-							<li><a href="policy.html#assignments">Assignments</a></li>
+							<li><a href="policy.html#success">Success</a></li>
 							<li><a href="policy.html#rules">Rules</a></li>
 						</ul>
 					</li>
@@ -82,10 +88,159 @@
    	<div class="row">
 
    		<div id="main" class="ten columns">
-			
-		</div> <!-- end main -->
 
-	</div> <!-- end row -->
+			<article class="entry" id="exercises">
+
+				<header class="entry-header">
+
+					<h2 class="entry-title">
+						Exercises
+					</h2>
+
+				</header>
+
+				<div class="entry-content">
+					<h3>Standard Exercises</h3>
+					<ul>
+						<li><tt>Basics.v</tt>: All 1 star (10 total) and 2 star (7 total) exercises</li>
+						<li><tt>Induction.v</tt>: All 2 star (9 total) exercises</li>
+						<li><tt>Lists.v</tt>: All 1 star (7 total) and 2 star (5 total) exercises</li>
+						<li><tt>Poly.v</tt>: All 1 star (3 total) and 2 star (11 total) exercises</li>
+						<li><tt>Tactics.v</tt>: All 1 star (2 total) and 2 star (5 total) exercises</li>
+						<li><tt>Logic.v</tt>: All 1 star (10 total) and 2 star (12 total) exercises</li>
+						<li><tt>IndProp.v</tt>: All 1 star (8 total) and 2 star (10 total) exercises</li>
+						<li><tt>ProofObjects.v</tt>: All 1 star (4 total) and 2 star (10 total) exercises</li>
+						<li><tt>IndPrinciples.v</tt>: All 1 star (6 total) and 2 star (3 total) exercises</li>
+						<li><tt>Rel.v</tt>: All 1 star (3 total) and 2 star (9 total) exercises</li>
+					</ul>
+					
+					<h3>Advanced Exercises</h3>
+					<ul>
+						<li><tt>Induction.v</tt>: All 3 star (4 total) exercises</li>
+						<li><tt>Lists.v</tt>: All 3 star (7 total) exercises</li>
+						<li><tt>Poly.v</tt>: All 3 star (6 total) exercises</li>
+						<li><tt>Tactics.v</tt>: All 3 star (10 total) exercises</li>
+						<li><tt>Logic.v</tt>: All 3 star (7 total) exercises</li>
+						<li><tt>IndProp.v</tt>: All 3 star (15 total) exercises</li>
+					</ul>
+
+					<h3>Extra Challenges</h3>
+					<ul>
+						<li><tt>Induction.v</tt>: The 4 star exercise <tt>bin_nat_bin</tt></li>
+						<li><tt>Tactics.v</tt>: The 4 star exercise <tt>forall_exists_challenge</tt></li>
+						<li><tt>Logic.v</tt>: The 4 star exercise <tt>tr_rev_correct</tt></li>
+						<li><tt>Logic.v</tt>: The 5 star exercise <tt>classical_axioms</tt></li>
+					</ul>
+				</div>
+
+			</article>
+				
+			<article class="entry" id="todo">
+
+				<header class="entry-header">
+
+					<h2 class="entry-title">
+						What To Do
+					</h2>
+
+				</header>
+
+				<div class="entry-content">
+					<h3>Choose Your Own Adventure!</h3>
+					<p>
+						Some students will have previous experience with functional programming, some with formal mathematical proofs, and some will be completely new to the area. For that reason, everyone will get their own choice of which exercises to tackle throughout the semester.
+					</p>
+
+					<p>
+						The summary is that you will have to complete <b>10 things</b> by the end of the semester. What is a "thing?" A set of exercises from one of the chapters of Software Foundations. The exercise sets will come in three different groups of increasing difficulty:
+						<ol>
+							<li>Standard: All of the 1 star and 2 star exercises of a chapter, some of which we will do together in class.</li>
+							<li>Advanced: All of the 3 star exercises of a chapter.</li>
+							<li>Challenge: A single, select 4 star or 5 star exercise.</li>
+						</ol>
+						When in doubt, stick with the Standard exercises for the chapters we cover in class. If those become too easy, try your hand at some Advanced exercises. If you have success with those, and see a Challenge problem that piques your interest, feel free to have a go.
+					</p>
+
+					<p>
+						There are also many more chapters and books to the Software Foundations series covering other, specialized topics. If one of those are of interest to you, talk to the professor to pick some exercises to work on, since explicit permission is needed if you go outside the scope of the in-class lectures. Otherwise, there are some exercise sets listed above that have been pre-approved for you.
+					</p>
+
+					<h3>Mechanical vs Prosaic</h3>
+					<p>
+						Both traditional "pen-and-paper" proofs written in natural human language and the newer machine-checked proofs written in a formal programming language have their own advantages and disadvantages. On the one hand, traditional proofs are written in a prose style that fits well with the human's understanding of the problem and elides obvious details. However, many students first learning this style have difficulty understanding what is really necessary to say, what is obvious or not, and whether the statements made have any meaning at all. On the other hand, machine-checked proofs are written using a formally rigorous and structured language that removes any ambiguity, and whose correctness can be automatically confirmed. However, the level of detail can make it easy to miss the forest for the trees, and the inflexible structure can overshadow the bigger-picture idea that is more useful to humans than computers.
+					</p>
+
+					<p>
+						That's why, in this class, you will be writing <em>both</em> styles of proofs for the same exercises. To fully complete a given set of exercises requires two parts:
+						<ol>
+							<li>for <b>all</b> the exercises, write the proofs formally in Coq as stated in Software Foundations, <em>and</em></li>
+							<li>for <b>half</b> the exercises <b>rounded up</b>, write an accompanying informal proof in English prose.</li>
+						</ol>
+						That means there will always be at least one informal English proof, even for a one-question Challenge exercise. The informal proof may be done in comments next to the formal proof in the same file, or they may be gathered in a separate file. Either way, be sure to document where these may be found in a way that someone else can find them (see below).
+					</p>
+
+					<p>
+						To have the best success in class, the formal and informal proofs should be seen as complementary parts of the same thing as opposed to two separate and unrelated tasks. As the exercises become more challenging, here is a suggested workflow that integrates both formal and informal aspects to harness their complementary strengths:
+						<ol>
+							<li>Start with some introductory tactics in the formal proof (like <tt>intros</tt> and <tt>induction</tt>) to let the computer guide the overall structure of the proof. For example, what cases do you have, and what do your induction hypotheses look like in each case.</li>
+							<li>Begin an informal proof with that same structure, and in each case, convince yourself why that case <em>should</em> be true. You can hand-wave over some of the more obvious details, and instead focus on the essential challenge of why the case is correct. Sometimes this is trivial. Sometimes you have to just apply the inductive hypothesis. Sometimes you need to use a previous fact already proved before.</li>
+							<li>Having informally convinced yourself, you now need to convince the computer. Try to use the intuitive reason why each case is correct to guide your tactics in Coq. There may be some additional symbolic manipulation that needs to happen inbetween steps in your informal proof to connect the gaps.</li>
+							<li>Finally, after finishing the formal proof, look back at your informal proof to check for mistakes. Did you forget an important step that was worth explaining to antoher person? Was one of your assumptions or conclusions actually incorrect?</li>
+						</ol>
+						If you follow this plan for the more challenging exercises, then you will end up with both formal and informal proofs in the same time it takes to just do one on its own. It is easy to write a wrong English proof, but the computer won't be convinced. It is easy to spend all day spamming Coq tactics until you get to <tt>Qed</tt> without understanding what is going on.
+					</p>
+				</div>
+
+			</article>
+			
+			<article class="entry" id="organization">
+
+				<header class="entry-header">
+
+					<h2 class="entry-title">
+						Organization
+					</h2>
+
+				</header>
+
+				<div class="entry-content">
+					<h3>Repository</h3>
+					<p>
+						Using version control is good practice whenever you have some code or text that evolves over time. By the end of the semester, you must turn in all your work in the form of a <b>single git repository</b> holding all of your solutions. This can be shared with the professor either via email or a <b>PRIVATE</b> github repository (to avoid plagiarism).
+					</p>
+	
+					<h3>Progress</h3>
+					<p>
+						At the beginning of the semester, you should start by creating an initial git repository with the entire Logical Foundations book source files. As you work on exercises, commit your partial progress at regular intervals. In fact, committing incomplete, and even incorrect, throughout the semester is highly encouraged as a way to "show your work." These will provide valuable hints for feedback mid-semester, and only the final solutions at the end will be graded. There will never be a penalty or negative judgement for mistakes made along the way.
+					</p>
+
+					<h3>Documentation</h3>
+					<p>
+						To help another person (i.e., the grader) find your work, you need to properly document what you did. The top-level of your repository <em>must</em> have a <tt>README</tt> file that lists what exercises you did, and in what files to find your formal Coq proofs and informal English proofs. This list should look like the following example, which includes a numbered list of each exercise set completed and which files the formal and informal proofs can be found:
+<pre>
+1. All 1 and 2 star exercises from Functional Programming in Coq
+   * Formal: Basics.v
+   * Informal: Basics.v
+2. All 3 star exercises from Proof by Induction
+   * Formal: Induction.v
+   * Informal: Induction.md
+3. 4 star exercise bin_nat_bin
+   * Formal: Induction.v
+   * Informal: Bin.pdf
+</pre>
+					</p>
+					
+					<p>
+						<b>WARNING:</b> anything not listed in this <tt>README</tt> file will not be looked at, and not be graded. If your repository has no <tt>README</tt> documenting what was done, then the grade is automatically 0.
+					</p>
+					
+				</div>
+
+			</article>
+
+	  	</div> <!-- end main -->
+
+		</div> <!-- end row -->
 
 	</div> <!-- end content-wrap -->
    
