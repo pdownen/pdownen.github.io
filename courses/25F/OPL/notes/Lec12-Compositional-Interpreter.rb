@@ -3,7 +3,7 @@
 ###       Compositional Interpreter       ###
 ###                                       ###
 ### Organization of Programming Languages ###
-###              Spring 2023              ###
+###               Fall 2025               ###
 ###              Paul Downen              ###
 #############################################
 

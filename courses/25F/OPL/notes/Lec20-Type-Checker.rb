@@ -3,7 +3,7 @@
 ###      Implementing a Type Checker      ###
 ###                                       ###
 ### Organization of Programming Languages ###
-###              Spring 2023              ###
+###               Fall 2025               ###
 ###              Paul Downen              ###
 #############################################
 
@@ -168,7 +168,7 @@ ex7 = {if: [{bool: true}, {num: 1}, {bool: false}]}
 
 examples = [ex1, ex2, ex3, ex4, ex5, ex6, ex7]
 
-examples.each do |ex|
+for ex in examples
   begin
     puts "", ex, ":", infer_type(ex)
   rescue TypeError => err
@@ -337,7 +337,7 @@ ex12 = {let: [{var: :w}, {num: 3}, {plus: [{var: :x}, {var: :w}]}]}
 
 var_examples = [ex8, ex9, ex10, ex11, ex12]
 
-var_examples.each do |ex|
+for ex in var_examples
   begin
     puts "", init_env, "⊢", ex, ":", infer_type_in(ex, init_env)
   rescue TypeError => err

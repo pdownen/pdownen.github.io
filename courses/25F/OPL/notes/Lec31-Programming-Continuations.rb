@@ -2,7 +2,7 @@
 ###     Programming With Continuations    ###
 ###                                       ###
 ### Organization of Programming Languages ###
-###              Spring 2023              ###
+###               Fall 2025               ###
 ###              Paul Downen              ###
 #############################################
 
@@ -91,7 +91,7 @@ pp list_three { "same" }
 
 x = 0
 vals = list_three do
-  x + 1
+  x = x + 1
   x
 end
 pp vals
@@ -182,6 +182,8 @@ def diagonally(matrix)
 
     row = row+1
   end
+
+  return matrix
 end
 
 diagonally($four_by_four) {|n| puts n}

@@ -2,7 +2,7 @@
 ###      Continuation-Passing Style       ###
 ###                                       ###
 ### Organization of Programming Languages ###
-###              Spring 2023              ###
+###               Fall 2025               ###
 ###              Paul Downen              ###
 #############################################
 
@@ -99,14 +99,6 @@ class Control
   def self.just(x)
     Control.new(lambda { |&cont| cont.call(x) })
   end
-
-  def self.label
-    Control.new(lambda { |&cont| yield(cont) })
-  end
-
-  def self.label(&subroutine)
-    Control.new(lambda { |&cont| subroutine.call(cont) })
-  end
 end
 
 Control.just(4).then do |x|
@@ -126,6 +118,17 @@ end
             λz.(λk₄. puts z; k₄(nil))
                 λ_. k₀(z)
 =end
+
+
+class Control
+  def self.label
+    Control.new(lambda { |&cont| yield(cont) })
+  end
+
+  def self.label(&subroutine)
+    Control.new(lambda { |&cont| subroutine.call(cont) })
+  end
+end
 
 result = Control.just(4).then do |x|
   Control.label do |future|
@@ -245,11 +248,9 @@ def divide_pause(x, y)
   end
 end
 
-$default_denominator = lambda {|numerator| 2}
-
 def test_pause(over, under)
   div = divide_pause(over, under).handle do |numerator, resume_division|
-    nonzero = $default_denominator.call(numerator)
+    nonzero = yield(numerator)
     puts (
 "Tried to divide #{numerator} by zero; \
 resume using #{nonzero} instead")
@@ -260,5 +261,5 @@ resume using #{nonzero} instead")
   return result
 end
 
-test_pause(10, 5)
-test_pause(10, 0)
+test_pause(10, 5) {|numerator| 2}
+test_pause(10, 0) {|numerator| 2}

@@ -3,7 +3,7 @@
 ###       The Expressibility Matrix       ###
 ###                                       ###
 ### Organization of Programming Languages ###
-###              Spring 2023              ###
+###               Fall 2025               ###
 ###              Paul Downen              ###
 #############################################
 
@@ -69,7 +69,6 @@ cond_examples = [ex4, ex5]
 examples = arith_examples + cond_examples
 
 examples.each { |ex| puts ex }
-
 
 def eval_arith(expr)
   case expr

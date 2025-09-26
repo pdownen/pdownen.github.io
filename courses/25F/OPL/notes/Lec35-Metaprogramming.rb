@@ -40,33 +40,27 @@ def times(n, m)
   end
 end
 
-class Integer
-  def iterate
-    return lambda do |z, &s|
-      x = z
-      self.times { x = s.call(x) }
-      return x
-    end
-  end
-end
-
 def true.if
-  yield().then()
+  branches = yield()
+  branches.then()
 end
 
 def false.if
   yield.else
 end
 
+class CheckTrueFalse
+  def then
+    puts "it's true"
+  end
+
+  def else
+    puts "it's false"
+  end
+end
+
 true.if do
-  Class.new do
-    def then
-      puts "it's true"
-    end
-    def else
-      puts "it's false"
-    end
-  end.new
+  CheckTrueFalse.new
 end
 
 false.if do
@@ -78,4 +72,18 @@ false.if do
       puts "now it's false"
     end
   end.new
+end
+
+class Integer
+  def iterate(z)
+    x = z
+    self.times { x = yield(x) }
+    return x
+  end
+
+  def church
+    return lambda do |z, &s|
+      self.iterate(z, &s)
+    end
+  end
 end
