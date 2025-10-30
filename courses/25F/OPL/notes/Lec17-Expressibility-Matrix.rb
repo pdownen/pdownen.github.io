@@ -35,37 +35,50 @@
 # Here are some examples of arithmetic and conditional expressions
 # represented as nested hash-tables using the rules above:
 
-# ex1 = (5 + 4) - 3
-# ex1 = minus(plus(5,4),3)
-ex1   = {minus: [{plus: [{num: 5}, {num: 4}]},
+# ex1 = 4 - 2 - 1
+# ex1 = minus(minus(4, 2), 1)
+ex1   = {minus: [{minus: [{num: 4},
+                          {num: 2}]},
+                 {num: 1}]}
+
+# ex2 = 4 - (2 - 1)
+# ex2 = minus(4, minus(2, 1))
+ex2   = {minus: [{num: 4},
+                 {minus: [{num: 2},
+                          {num: 1}]}]}
+
+# ex3 = (5 + 4) - 3
+# ex3 = minus(plus(5,4),3)
+ex3   = {minus: [{plus: [{num: 5},
+                         {num: 4}]},
                  {num: 3}]}
 
-# ex2 = 5 + 1 - (2 + 2)
-# ex2 = minus(plus(5,1),plus(2,2))
-ex2   = {minus: [{plus: [{num: 5}, {num: 1}]},
+# ex4 = 5 + 1 - (2 + 2)
+# ex4 = minus(plus(5,1),plus(2,2))
+ex4   = {minus: [{plus: [{num: 5}, {num: 1}]},
                  {plus: [{num: 2}, {num: 2}]}]}
 
-# ex3 = if 1 + 1 >= 2 then (1 + 1) - 2 else 0
-# ex3 = if(geq?(plus(1,1),2), minus(plus(1,1), 2), 0)
-ex3   = {if: [{geq?: [{plus: [{num: 1}, {num: 1}]},
+# ex5 = if 1 + 1 >= 2 then (1 + 1) - 2 else 0
+# ex5 = if(geq?(plus(1,1),2), minus(plus(1,1), 2), 0)
+ex5   = {if: [{geq?: [{plus: [{num: 1}, {num: 1}]},
                       {num: 2}]},
               {minus: [{plus: [{num: 1}, {num: 1}]},
                        {num: 2}]},
               {num: 0}]}
 
-# ex4 = true or 0 - 2 >= 0
-# ex4 = or(true,geq?(minus(0,2), 0))
-ex4   = {or: [{bool: true},
+# ex6 = true or 0 - 2 >= 0
+# ex6 = or(true,geq?(minus(0,2), 0))
+ex6   = {or: [{bool: true},
               {geq?: [{minus: [{num: 0}, {num: 2}]},
                       {num: 0}]}]}
 
-# ex5 = 3 >= 4 or 4 >= 5
-# ex5 = or(geq?(3, 4), geq?(4, 5))
-ex5   = {or: [{geq?: [{num: 3}, {num: 4}]},
+# ex7 = 3 >= 4 or 4 >= 5
+# ex7 = or(geq?(3, 4), geq?(4, 5))
+ex7   = {or: [{geq?: [{num: 3}, {num: 4}]},
               {geq?: [{num: 4}, {num: 5}]}]}
 
-arith_examples = [ex1, ex2, ex3]
-cond_examples = [ex4, ex5]
+arith_examples = [ex1, ex2, ex3, ex4, ex5]
+cond_examples = [ex6, ex7]
 examples = arith_examples + cond_examples
 
 examples.each { |ex| puts ex }
@@ -208,10 +221,10 @@ cond_examples.each { |ex| puts ugly_print_cond(ex) }
 def flatten_sum(expr)
   case expr
   in {plus: [left, right]}
-    flatten_sum(left) + [:plus] + flatten_sum(right)
+    flatten_sum(left) + [:plus, right]
 
   in {minus: [left, right]}
-    flatten_sum(left) + [:minus] + flatten_sum(right)
+    flatten_sum(left) + [:minus, right]
 
   else
     [expr]

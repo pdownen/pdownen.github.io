@@ -97,50 +97,65 @@
 # Here are some examples of arithmetic and conditional expressions
 # represented as nested hash-tables using the rules above:
 
-# ex1 = (5 + 4) * 3
-# ex1 = times(plus(5,4),3)
-ex1   = {times: [{plus: [{num: 5}, {num: 4}]}, {num: 3}]}
+# ex1 = 4 - 2 - 1
+# ex1 = minus(minus(4, 2), 1)
+ex1   = {minus: [{minus: [{num: 4}, {num: 2}]}, {num: 1}]}
 
-# ex2 = (4 - 1) / 2
-# ex2 = divide(minus(4,1),2)
-ex2   = {divide: [{minus: [{num: 4}, {num: 1}]}, {num: 2}]}
+# ex2 = 4 - (2 - 1)
+# ex2 = minus(4, minus(2, 1))
+ex2   = {minus: [{num: 4}, {minus: [{num: 2}, {num: 1}]}]}
 
-# ex3 = 5 + 1 - 2 * 2
-# ex3 = minus(plus(5,1),times(2,2))
-ex3   = {minus: [{plus: [{num: 5}, {num: 1}]}, {times: [{num: 2}, {num: 2}]}]}
+# ex3 = (5 + 4) * 3
+# ex3 = times(plus(5,4),3)
+ex3   = {times: [{plus: [{num: 5}, {num: 4}]}, {num: 3}]}
 
-# ex4 = if zero?(1 + 1 - 2) then 4 / 2 else 4 / (1 + 1 - 2)
-# ex4 = if(zero?(minus(plus(1,1),2)), divide(4,2), divide(4,minus(plus(1,1),2)))
-ex4   = {if: [{zero?: {minus: [{plus: [{num: 1}, {num: 1}]},
+# ex4 = (4 - 1) / 2
+# ex4 = divide(minus(4,1),2)
+ex4   = {divide: [{minus: [{num: 4}, {num: 1}]}, {num: 2}]}
+
+# ex5 = 5 + 1 - 2 * 2
+# ex5 = minus(plus(5,1),times(2,2))
+ex5   = {minus: [{plus: [{num: 5}, {num: 1}]}, {times: [{num: 2}, {num: 2}]}]}
+
+# ex6 = if zero?(1 + 1 - 2) then 4 / 2 else 4 / (1 + 1 - 2)
+# ex6 = if(zero?(minus(plus(1,1),2)), divide(4,2), divide(4,minus(plus(1,1),2)))
+ex6   = {if: [{zero?: {minus: [{plus: [{num: 1}, {num: 1}]},
                                {num: 2}]}},
               {divide: [{num: 4}, {num: 2}]},
               {divide: [{num: 4},
                         {minus: [{plus: [{num: 1}, {num: 1}]},
                                  {num: 2}]}]}]}
 
-# ex5 = if zero?((3 + 4) * (1 - 1)) then 5 - 2 else 6 / 2
-# ex5 = if(zero?(times(plus(3,4), minus(1,1))), minus(5,2), divide(6,2))
-ex5   = {if: [{zero?: {times: [{plus: [{num: 3}, {num: 4}]},
+# ex7 = if zero?((3 + 4) * (1 - 1)) then 5 - 2 else 6 / 2
+# ex7 = if(zero?(times(plus(3,4), minus(1,1))), minus(5,2), divide(6,2))
+ex7   = {if: [{zero?: {times: [{plus: [{num: 3}, {num: 4}]},
                                {minus: [{num: 1}, {num: 1}]}]}},
               {minus: [{num: 5}, {num: 2}]},
               {divide: [{num: 6}, {num: 2}]}]}
 
-# ex6 = zero?(2 + 3 - 5)
-# ex6 = zero?(minus(plus(2,3),5))
-ex6   = {zero?: {minus: [{plus: [{num: 2}, {num: 3}]},
-                         {num: 5}]}}
+# ex8 = false and true and false
+# ex8 = and(false, and(true, false))
+ex8   = {and: [{bool: false}, {and: [{bool: true}, {bool: false}]}]}
 
-# ex7 = false and zero?(1 / 0)
-# ex7 = and(false,zero?(divide(1,0)))
-ex7   = {and: [{bool: false},
-               {zero?: {divide: [{num: 1}, {num: 0}]}}]}
+# ex9 = (false and true) and false
+# ex9 = and(and(false, true), false)
+ex9   = {and: [{and: [{bool: false}, {bool: true}]}, {bool: false}]}
 
-# ex8 = 4 >= 3 and 5 >= 4 or zero?(4)
-# ex8 = or(and(geq?(4, 3), geq?(5, 4)), zero?(4))
-ex8   = {or: [{and: [{geq?: [{num: 4}, {num: 3}]},
-                     {geq?: [{num: 5}, {num: 4}]}]},
-              {zero?: {num: 4}}]}
+# ex10 = zero?(2 + 3 - 5)
+# ex10 = zero?(minus(plus(2,3),5))
+ex10   = {zero?: {minus: [{plus: [{num: 2}, {num: 3}]},
+                          {num: 5}]}}
 
+# ex11 = false and zero?(1 / 0)
+# ex11 = and(false,zero?(divide(1,0)))
+ex11   = {and: [{bool: false},
+                {zero?: {divide: [{num: 1}, {num: 0}]}}]}
+
+# ex12 = 4 >= 3 and 5 >= 4 or zero?(4)
+# ex12 = or(and(geq?(4, 3), geq?(5, 4)), zero?(4))
+ex12   = {or: [{and: [{geq?: [{num: 4}, {num: 3}]},
+                      {geq?: [{num: 5}, {num: 4}]}]},
+               {zero?: {num: 4}}]}
 
 # Write down the following A syntax tree as a symbolic hash-table
 # using the rules above:
@@ -352,55 +367,59 @@ end
 ################
 
 # Because we are now representing syntax trees concretely as (nested)
-# hash-tables, it is easy to define new functions over them by just
-# matching on the patterns in the given hash-table.
+# hash-tables, it is easy to define new functions over them by just matching on
+# the patterns in the given hash-table.
 
 # Complete the following two functions:
 #
-#   * `flatten_product` takes any arithmetic syntax tree and returns a
-#     list representing the outer-most "product", containing a series
-#     multiplicative operation `:times` or `:divide` in between
-#     "factors" (arithmetic sub-expressions which are not a `:times`
-#     or `:divide` operation)
+#   * `flatten_product` takes any arithmetic syntax tree and returns a list
+#     representing the outer-most "product", containing a series multiplicative
+#     operation `:times` or `:divide` in between "factors" (arithmetic
+#     sub-expressions which are not a `:times` or `:divide` operation).
+#     `flatten_product` should associate to the *left*, which means that given
+#     any multiplication or division expression, the left argument gets
+#     flattened, but the right argument is kept as-is.
 #
-#   * `flatten_logic` takes any conditional syntax tree and returns a
-#     list representing the outer-most boolean "logic", containing a
-#     series of boolean operations `:and` or `:or` in between "terms"
-#     (conditional sub-expressions which are not an `:and` or `:or`
-#     operation)
+#   * `flatten_logic` takes any conditional syntax tree and returns a list
+#     representing the outer-most boolean "logic", containing a series of
+#     boolean operations `:and` or `:or` in between "terms" (conditional
+#     sub-expressions which are not an `:and` or `:or` operation).
+#     `flatten_logic` should associate to the *right*, which means that given
+#     any "and" or "or" expression, the right argument gets flattened, but the
+#     left argument is kept as-is.
 #
-# You may use the completed definition of the similar `flatten_sum`
-# function below as an example to help you fill in your answer.
+# You may use the completed definition of the similar `flatten_sum` function
+# below as an example to help you fill in your answer.
 
+# flatten additive (+, -) operations associating to the *left*
 def flatten_sum(expr)
   case expr
   in {plus: [left, right]}
-    flatten_sum(left) + [:plus] + flatten_sum(right)
+    flatten_sum(left) + [:plus, right]
 
   in {minus: [left, right]}
-    flatten_sum(left) + [:minus] + flatten_sum(right)
+    flatten_sum(left) + [:minus, right]
 
   else
     [expr]
   end
 end
 
+# flatten multiplicative (*, /) operations associating to the *left*
 def flatten_product(expr)
   case expr
   in {times: [left, right]}
     ### FILL IN HERE ###
-    # Return a list starting with the factors generated by flattening
-    # the outer-most product in the left sub-expression, then followed
-    # by a `:times` symbol, and finally ending with the factors
-    # generated by flattening the outer-most product in the right
+    # Return a list starting with the factors generated by flattening the
+    # outer-most product in the left sub-expression, then followed by a `:times`
+    # symbol, and finally ending with the (unflattened) right sub-expression.
     # sub-expression.
 
   in {divide: [left, right]}
     ### FILL IN HERE ###
-    # Return a list starting with the factors generated by flattening
-    # the outer-most product in the left sub-expression, then followed
-    # by a `:divide` symbol, and finally ending with the factors
-    # generated by flattening the outer-most product in the right
+    # Return a list starting with the factors generated by flattening the
+    # outer-most product in the left sub-expression, then followed by a
+    # `:divide` symbol, and finally ending with the (unflattened) right
     # sub-expression.
 
   else
@@ -410,27 +429,24 @@ def flatten_product(expr)
   end
 end
 
+# flatten logical (and, or) operations associating to the *right*
 def flatten_logic(expr)
   ### FILL IN HERE ###
-  # Write a case-analysis on the conditional syntax tree `expr` that
-  # handles the following possible cases:
+  # Write a case-analysis on the conditional syntax tree `expr` that handles the
+  # following possible cases:
   #
-  #   * If `expr` matches the pattern {and: [left, right]}, then
-  #     return a list starting with the terms generated by flattening
-  #     the outer-most logic in the left sub-expression, then followed
-  #     by a `:and` symbol, and finally ending with the terms
-  #     generated by flattening the outer-most logic in the right
-  #     sub-expression.
+  #   * If `expr` matches the pattern {and: [left, right]}, then return a list
+  #     starting with the left sub-expression as-is, then followed by a `:and`
+  #     symbol, and finally ending with the terms generated by flattening the
+  #     outer-most logic in the right sub-expression.
   #
-  #   * If `expr` matches the pattern {or: [left, right]}, then
-  #     return a list starting with the terms generated by flattening
-  #     the outer-most logic in the left sub-expression, then followed
-  #     by a `:or` symbol, and finally ending with the terms
-  #     generated by flattening the outer-most logic in the right
-  #     sub-expression.
+  #   * If `expr` matches the pattern {or: [left, right]}, then return a list
+  #     starting with the left sub-expression as-is, then followed by a `:or`
+  #     symbol, and finally ending with the terms generated by flattening the
+  #     outer-most logic in the right sub-expression.
   #
-  #   * In all other cases, just return a one-element list containing
-  #     the original `expr` as-is.
+  #   * In all other cases, just return a one-element list containing the
+  #     original `expr` as-is.
 end
 
 
@@ -671,8 +687,8 @@ end
 ## Test Cases ##
 ################
 
-arith_examples = [ex1, ex2, ex3, ex4, ex5]
-cond_examples  = [ex6, ex7, ex8]
+arith_examples = [ex1, ex2, ex3, ex4, ex5, ex6, ex7]
+cond_examples  = [ex8, ex9, ex10, ex11, ex12]
 
 puts ""
 puts "Exercises 1 & 2: Syntactic Expressions as Symbolic Hash Tables"
