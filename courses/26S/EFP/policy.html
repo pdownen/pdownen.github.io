@@ -18,7 +18,7 @@
 
 	<!-- CSS
 	================================================== -->
-	<link rel="stylesheet" href="css/default.css">
+ 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/layout.css">  
 	<link rel="stylesheet" href="css/media-queries.css"> 
 
@@ -117,39 +117,46 @@
 					<p>
 						This is a hands-on course, and the majority of your grade will be determined by small regularly-assigned projects, which mostly involve writing some code.
 						These assignments <i>will</i> take more than one day to complete.
-						That is why most assignments are given well in advance of their due date (usually two weeks).
-						I <b><i>STRONGLY</i></b> recommend that you begin working on an assignment the first week it is made available, once you finish with the previous one.
+						That is why the schedule of due dates give multiple weeks for each programming assignment.
+						I <b><i>STRONGLY</i></b> recommend that you begin working on an assignment the first week we begin covering pre-requisite material in class.
 						If you wait until the due date before beginning work on an assignment, you will struggle to complete it in time.
 						Planning ahead can save you a lot of heartache in this course.
-						If you are frequently having trouble with staying on top of the assignment deadlines, then please contact <a href="mailto:paul@pauldownen.com">the professor</a> as soon as possible to work on a solution before it becomes a problem.
+						If you are frequently having trouble with staying on top of your coursework, then please contact <a href="mailto:paul@pauldownen.com">the professor</a> as soon as possible to work on a solution before it becomes a problem.
 					</p>
 
 					<p>
 						There is ample opportunity to collect extra credit points throughout the course by completing bonus exercises given out in the regular assignments.
-						If you complete a bonus exercise and want it to be graded for potential extra credit, be sure to <b>list which bonus exercises you have completed</b> in your submission, otherwise they may not be graded.
-						To list the bonus exercises included in your submission, include a file named <samp>extracredit</samp> (such as <code>extracredit.md</code> or <code>extracredit.txt</code>) which names the bonus sections and/or bonus exercises you completed.
+						If answered correctly, bonus exercises earn you extra points toward the overall assignment total, without increasing the "maximum" number of target points for the assignment.
+						Besides the calculation of an assignment's "maximum" number of points, there is no distinction between extra credit and normal points when calculating grades.
+						For example, completing a 10-point regular exercise and skipping a 10-point bonus exercise counts the same as skipping the 10-point regular exercise and completing the 10-point bonus exercise.
+						It is also very possible to earn more than 100% on each assignment, by earning a number of points that is larger than the "maximum" target.
+						All the individual assignment grades (whether above or below 100%) will be added together to calculate the final assignment grade.
 					</p>
 
 					<p>
-						Assignments will be turned in online, via <a href="https://uml.umassonline.net">Blackboard</a>.
-						If there are multiple files to turn in (such as a directory of code files), turn in a single archive that includes all the files you wish to turn in.
+						All assignments will be turned in online, using GradeScope, via <a href="https://canvas.uml.edu/">Canvas</a>.
+						If there are multiple files to turn in (such as a project directory containing code files), you may turn in a single archive that includes the entire project directory, or attach multiple files individually.
 						If there is a written portion to the assignment, then turn in your writing in a portable document file format (e.g. pdf, txt, markdown).
 						Microsoft Word and other similar word processor formats should be converted to a portable format for turning in.
 						Homework in an inappropriate format (in particular, if you turn in code as a non-executable file, such as a PDF) will not be graded.
 					</p>
 
-					<h3>Deadlines</h3>
 					<p>
-						For the sake of fairness among all students, and to accommodate unexpected emergencies that might keep you from finishing your homework on time, you will start with an initial pool of <b>10 FREE MISSED DEADLINE DAYS</b>.
-						Every time you want turn in an assignment <em>n</em> days late, you can use <em>n</em> days from your pool of free missed deadline days, and it will be graded without penalty no-questions-asked.
-						Otherwise, if you do not have enough days to make up for a missed deadline, your late assignment will not be accepted, and the grade will be 0.
+						For programming assignments, your grade is automatically calculated using the testing suite in the provided project template.
+						You can run these tests locally while working on your homework to preview what your score will be.
+						When you are happy with your score, turn in your code on GradeScope, which will run the same tests and automatically record your grade.
+						You may resubmit an automatically-graded programming assignment at any time to be regraded, without penalty.
+						If you do not see a grade (or see a 0 grade) within 5-10 minutes, then likely something has gone wrong in the autograding process.
+						<b>It is your (the student's) responsibility to ensure that their coding submissions have been graded and recorded correctly.</b>
+						If you think something has gone wrong, then contact the instructor for help with correcting the submission process.
 					</p>
 
+					<h3>Final Project</h3>
 					<p>
-						In very exceptional circumstances, additional extensions to due dates <em>may</em> be granted at the discretion of the instructor if a student has unusual circumstances (such as long-term health issues) that would reasonably interfere with the on-time completion of several assignments throughout the course of the semester.
-						To ensure that all students can be fairly accommodated, these exceptional extensions must be requested well in advance of the due date in question, as soon as possible.
-						Ordinary illness, short-term personal emergencies, or other school or work obligations (especially on the day of the due date) do not count as exceptional circumstances, and are covered by your free missed deadline days.
-						So be sure to budget your free missed deadline days wisely to help you in these situations.
+						The final project gives you the chance to apply the skilled you learned in this class to a problem that is relevant to you.
+						It is also the best test on your mastery of those skills and concepts when given complete freedom.
+						As such, <b>the final project is mandatory to pass the class</b>.
+						Turning in nothing for the final project, or otherwise getting a 0, will result in an automatic failure regardless of the extra credit earned in the regular assignments in the first part of the course.
 					</p>
 
 					<h3>Attendance</h3>
@@ -215,10 +222,17 @@
 
 				<div class="entry-content">
 					<h3>Academic Integrity and Plagiarism</h3>
+					
 					<p>
 						All students are advised that there is a <a href="https://www.uml.edu/catalog/undergraduate/policies/academic-policies/academic-integrity.aspx">University policy regarding academic integrity</a>.
 						Students are responsible for the honest completion and representation of their work.
 					</p>
+
+					<p>
+						<b>Plagiarism means taking credit for work you have not done yourself, or presenting someone else's work as your own.</b>
+						This may take many forms, such as copying answers from another student in class, automatically generating solutions using AI (see below), or copying projects from online repositories like GitHub.
+					</p>
+					
 					<p>
 						Students are welcome discuss the exercises with one another.
 						However, each student is responsible for their own work and completing all exercises independently.
@@ -236,9 +250,59 @@
 					</p>
 
 					<p>
+						In larger projects (namely, your final project), it may make sense to incorporate code written by others.
+						<b>It is your (the student's) responsibility to make it clear what code was developed by you and what code is from others (and, specifically, from whom).</b>
+						This is self-documenting when you include a package from Hackage in the formal Cabal/Stack project describtion.
+						In other cases, say if you downloaded a GitHub repository to use or extend with new features, <b>you must clearly document all sources of code you copied or modified, the original author(s), and where it was obtained, and how it was used in your project.</b>
+					</p>
+
+					<p>
+						All automatically-calculated grades are given pending a potential investigation for suspected plagiarism.
+						If it is found that a solution has been plagiarized, there will be a penalty based on the severity of the plagiarism.
+						In the worst case of complete plagiarism (for example, downloading a project off GitHub, erasing the original author information, and turning it in as if it was your own work) <b>can result in a negative grade (worse than turning in nothing).</b>
+					</p>
+
+					<p>
 						Posting answers to homework exercises to any publicly-visible website or location also counts as plagiarism.
 						Future students deserve the chance to fully engage with the homework assignments on their own.
 						If you are found publicly posting any answers to a homework assignment, it will be treated the same as if you provided your answers to another student of this same class.
+					</p>
+
+					<h3>A Note on Plagiarism and the Use of AI</h3>
+
+					<p>
+						Generative AI has become a new powerful productivity tool for writing code used in industry.
+						This class is meant to prepare you for real-world coding scenarios.
+						However, this class is <em>also</em> meant to be a supportive and safe practice space to learn new skills.
+						Overuse and misuse of AI can <em>rob</em> you of the opportunity to actually learning the fundamental skills you need to be a successful and productive programmer, especially since AI can and will be wrong and misleading at times.
+						This is your chance to develop those skills now, so that when you graduate and become a future programmer, you have the knowledge to successfully write code and direct AI.
+					</p>
+
+					<p>
+						Therefore, the policy in this class is that: <b>AI coding agents count as other humans (another student or external programmer) for evaluating cases of plagiarism.</b>
+						Any use of or interactions with AI will be treated the same as if that same interaction occured with another student in class.
+						As a quick rule of thumb to determine if some use of AI is acceptable, consider: "would it be okay if I did this with another student?"
+						Some things, like asking questions about homework problems, researching ideas and libraries, or general system-administrative tasks ("getting your computer set up to write and compile code") are all perfectly fine things to do with another student.
+						<em>Uploading the assignment documents and asking the AI to produce the answers for you is plagiarism, because copying another students answers is plagiarism.</em>
+					</p>
+
+					<p>
+						One exception of something that <em>is okay</em> to do with an AI agent, but <em>is not okay</em> with another student in the class, is to show it the code you have written and to ask for feedback.
+						For example, you might do this to debug problems, find better alternate solutions, or to help follow idiomatic coding style.
+						That's because the AI is not taking this class, and so sending it your code does not give answers to another student (which would be plagiarism).
+					</p>
+
+					<p>
+						In the context of the final project, the use of AI agents will be treated as other "team members" as if it is a group project.
+						However, be aware that <em>all</em> group projects (whether a team of all humans, or human with AI) need to have a significantly larger scale than individual projects, so that each team member has enough work to contribute toward their responsibilities to earn enough credit toward their grade.
+						As a rule of thumb, a group project with two team members should accomplish about twice as much as an individual project, since each team member should do as much work as it would take to complete a smaller project on their own.
+						When incorporating an AI team member, <b>it is vitally important to clearly document each team member's responsibilities, what code was contributed directly by (each) student, and what code was contributed by the AI agent</b>.
+						At a minimum, the high-level break-down describing each team member's role needs to be described in an easy-to-find location (such as a top-level README.md).
+						An easy way to keep track of who wrote each part of the project is to develop your project using standard version control (like git), and to submit the complete repository along with its log of commits showing authorship of each change.
+					</p>
+
+					<p>
+						If it is found that you have plagiarized any part of the final project or regular assignments with AI &mdash; by having an AI agent write code for you and claiming it is code you wrote, instead of properly giving credit to the real author &mdash; then this will be treated as if you have copied your code directly from another student, and will incur the same penalties.
 					</p>
 
 					<h3>Credit Hour Policy</h3>
