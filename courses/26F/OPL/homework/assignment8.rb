@@ -7,6 +7,13 @@
 ###              Paul Downen              ###
 #############################################
 
+## Remember!  Fill in your written explanations in your own words
+## explaining your work for coming up with each answer, how it works,
+## and why you think it's correct.  Include these written explanations
+## as a separate document, or as extended comments in this file in a
+## way that are easy to identify (to get full credit for your work).
+
+
 # For each of the exercises below, follow the instructions to fill in
 # the missing pieces of code, marked by the comment looking like
 #
